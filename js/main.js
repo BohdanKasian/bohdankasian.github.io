@@ -1,9 +1,5 @@
 "use strict";
 
-var _swiper = _interopRequireDefault(require("swiper"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 //toggle menu
 $(document).ready(function () {
   $('.menu__btn').click(function () {
@@ -373,7 +369,7 @@ $(".roadmap__content--ter").hover(function () {
 });
 
 if ($('body').width() <= 768) {
-  var swiper = new _swiper["default"](".mySwiper", {
+  var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     spaceBetween: -20,
     freeMode: true
