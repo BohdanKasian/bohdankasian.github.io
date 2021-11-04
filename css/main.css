@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 :root {
   --color-black: #000;
   --color-white: #fff;
@@ -75,11 +75,6 @@ body {
   margin: 0;
   font-family: "asd", sans-serif;
   overflow-x: hidden;
-  will-change: scroll-position;
-}
-
-* {
-  will-change: scroll-position;
 }
 
 ul {
