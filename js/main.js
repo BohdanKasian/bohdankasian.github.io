@@ -369,16 +369,10 @@ $(".roadmap__content--ter").hover(function () {
 });
 
 if ($('body').width() <= 768) {
-  // let swiper = new Swiper(".mySwiper", {
-  //   slidesPerView: "auto",
-  //   spaceBetween: -20,
-  //   freeMode: true,
-  // });
-  $('.app-mob__items').slick({
-    arrows: false,
-    infinite: false,
-    slidesToShow: 1,
-    swipeToSlide: true
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: -20,
+    freeMode: true
   });
 } //copy text
 

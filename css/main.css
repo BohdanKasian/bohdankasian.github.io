@@ -195,21 +195,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 580px) {
-  .header__gradient img {
+  .header__gradient svg {
     width: 200px;
     height: 200px;
   }
 }
 @media (max-width: 768px) {
-  .header__gradient img:first-child {
+  .header__gradient svg:first-child {
     display: none;
   }
 }
-.header__gradient img:last-child {
+.header__gradient svg:last-child {
   display: none;
 }
 @media (max-width: 768px) {
-  .header__gradient img:last-child {
+  .header__gradient svg:last-child {
     display: block;
   }
 }
@@ -232,27 +232,27 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 1024px) {
-  .header__gradient-right img {
+  .header__gradient-right svg {
     width: 700px;
     height: 700px;
   }
 }
 @media (max-width: 768px) {
-  .header__gradient-right img {
+  .header__gradient-right svg {
     width: auto;
     height: 500px;
   }
 }
 @media (max-width: 768px) {
-  .header__gradient-right img:first-child {
+  .header__gradient-right svg:first-child {
     display: none;
   }
 }
-.header__gradient-right img:last-child {
+.header__gradient-right svg:last-child {
   display: none;
 }
 @media (max-width: 768px) {
-  .header__gradient-right img:last-child {
+  .header__gradient-right svg:last-child {
     display: block;
   }
 }
@@ -2564,15 +2564,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 768px) {
-  .connect-nft .connect-nft__left-svg img:first-child {
+  .connect-nft .connect-nft__left-svg svg:first-child {
     display: none;
   }
 }
-.connect-nft .connect-nft__left-svg img:last-child {
+.connect-nft .connect-nft__left-svg svg:last-child {
   display: none;
 }
 @media (max-width: 768px) {
-  .connect-nft .connect-nft__left-svg img:last-child {
+  .connect-nft .connect-nft__left-svg svg:last-child {
     display: block;
   }
 }
@@ -2614,7 +2614,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 480px) {
-  .connect-nft__left img {
+  .connect-nft__left svg {
     height: 125px;
   }
 }
@@ -2656,7 +2656,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 480px) {
-  .connect-nft__right img {
+  .connect-nft__right svg {
     height: 125px;
   }
 }
