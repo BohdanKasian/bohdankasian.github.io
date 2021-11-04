@@ -426,21 +426,38 @@ $(".contactUs__copy-btn").click(function () {
   setTimeout(function () {
     $('.address__popup--tow-copy').removeClass('active');
   }, 2000);
-});
-var scrolling = false;
-$(window).scroll(function (event) {
-  scrolling = true;
-  console.log("event");
-});
-setInterval(function () {
-  if (scrolling) {
-    scrolling = false;
-    $(".menu__btn").removeClass('_active');
-  } else {
-    console.log("false");
+}); // let scrolling = false;
+// $( window ).scroll(function(event) {
+//   scrolling = true;
+//   console.log("event")
+// });
+//
+// setInterval(() => {
+//     if (scrolling) {
+//         scrolling = false;
+//         $( ".menu__btn" ).removeClass('_active')
+//     } else {
+//       console.log("false")
+//       $( ".menu__btn" ).addClass('_active')
+//     }
+// },500);
+//
+
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+    console.log("1");
     $(".menu__btn").addClass('_active');
+  } else {
+    console.log("2");
+    $(".menu__btn").removeClass('_active');
   }
-}, 500);
+
+  prevScrollpos = currentScrollPos;
+};
 "use strict";
 
 console.log('maxgraph');

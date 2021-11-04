@@ -75,11 +75,6 @@ body {
   margin: 0;
   font-family: "asd", sans-serif;
   overflow-x: hidden;
-  will-change: scroll-position;
-}
-
-* {
-  will-change: scroll-position;
 }
 
 ul {
@@ -2049,7 +2044,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 100% 100%;
   position: relative;
   transform: translateX(-120%);
-  transition: all 0.8s ease 0s;
+  transition: transform 0.8s, opacity 0.8s ease 0s;
   opacity: 0;
 }
 .about__desc._active {
