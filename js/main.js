@@ -1,5 +1,11 @@
 "use strict";
 
+// var elem = document.querySelector("body");
+// var scrollbar = Scrollbar.init(elem,
+//   {
+//     speed: 0.1,
+//     // damping:1
+//   });
 //toggle menu
 $(document).ready(function () {
   $('.menu__btn').click(function () {
@@ -40,7 +46,26 @@ $('.ticker').simplemarquee({
   delayBetweenCycles: .1,
   handleHover: false,
   handleResize: false
-}); //heder anim
+}); // document.addEventListener("DOMContentLoaded", () => {
+//   const controller = new ScrollMagic.Controller({refreshInterval: 1})
+//   const chapterNineMoney = new TimelineMax();
+//
+//   chapterNineMoney
+//     .to('.connect-nft__left', 1,
+//       {
+//         x:"0"
+//       })
+//
+//   const chapterNineMoneyScene = new ScrollMagic.Scene({
+//     triggerElement: '.connect-nft',
+//     triggerHook: '1',
+//     duration: '120%',
+//   })
+//     .setTween(chapterNineMoney)
+//
+//     .addTo(controller)
+// })
+//heder anim
 // if ($('body').width() > 1024) {
 
 var animItems = document.querySelectorAll('._anim-items');
