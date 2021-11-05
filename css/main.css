@@ -2826,7 +2826,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 .app__desc {
-  margin-top: 22px;
+  margin-top: 16px;
   margin-left: 10px;
 }
 .app__desc b {
@@ -3143,7 +3143,7 @@ h1, h2, h3, h4, h5, h6 {
   .app-mob__item {
     display: flex;
     min-width: 0;
-    width: 100%;
+    width: 348px !important;
     height: 136px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3166,7 +3166,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .app-mob__item .app-mob__icon {
   padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 14px;
 }
 .app-mob__item .app__desc {
   padding: 0;
@@ -3177,6 +3177,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .app-mob__item:nth-child(1) {
     background-image: url(./../img/app-mob-1.png);
+    min-width: 267px !important;
+    width: 269px !important;
   }
   .app-mob__item:nth-child(1) .app-mob__icon {
     padding-left: 53px;
@@ -3235,6 +3237,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .app-mob__item:nth-child(5) {
     background-image: url(./../img/app-mob-5.png);
+    min-width: 368px !important;
+    width: 368px !important;
   }
   .app-mob__item:nth-child(5) .app-mob__icon {
     padding-left: 40px;
@@ -4458,7 +4462,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
-.address__left-svg img {
+.address__left-svg svg {
   height: 500px;
 }
 .address__title {

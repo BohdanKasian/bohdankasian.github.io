@@ -38,7 +38,7 @@ $('.ticker').simplemarquee({
   cycles: Infinity,
   space: 25,
   delayBetweenCycles: .1,
-  handleHover: true,
+  handleHover: false,
   handleResize: false
 }); //heder anim
 // if ($('body').width() > 1024) {
