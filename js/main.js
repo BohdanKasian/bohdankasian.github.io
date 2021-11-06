@@ -5,36 +5,6 @@ var scrollbar = Scrollbar.init(elem, {
   speed: 0.1,
   alwaysShowTracks: true // damping:1
 
-});
-var aboutAnchors = document.querySelector('#aboutAnchors');
-aboutAnchors.addEventListener("click", function (e) {
-  e.preventDefault();
-  scrollbar.scrollIntoView(document.querySelector('#about'));
-});
-var appAnchors = document.querySelector('#appAnchors');
-appAnchors.addEventListener("click", function (e) {
-  e.preventDefault();
-  scrollbar.scrollIntoView(document.querySelector('#app'));
-});
-var nftAnchors = document.querySelector('#nftAnchors');
-nftAnchors.addEventListener("click", function (e) {
-  e.preventDefault();
-  scrollbar.scrollIntoView(document.querySelector('#nft'));
-});
-var roadMapAnchors = document.querySelector('#roadMapAnchors');
-roadMapAnchors.addEventListener("click", function (e) {
-  e.preventDefault();
-  scrollbar.scrollIntoView(document.querySelector('#roadmap'));
-});
-var tokenomicsAnchors = document.querySelector('#tokenomicsAnchors');
-tokenomicsAnchors.addEventListener("click", function (e) {
-  e.preventDefault();
-  scrollbar.scrollIntoView(document.querySelector('#tokenomics'));
-});
-var contactAnchors = document.querySelector('#contactAnchors');
-contactAnchors.addEventListener("click", function (e) {
-  e.preventDefault();
-  scrollbar.scrollIntoView(document.querySelector('#contactUs'));
 }); //toggle menu
 
 $(document).ready(function () {
@@ -437,7 +407,6 @@ $(".address__copy-btn").hover(function () {
   $('.address__popup--one').addClass('active');
 }, function () {
   $('.address__popup--one').removeClass('active');
-  $('.address__popup--one-copy').removeClass('active');
 });
 $(".contactUs__copy-btn").hover(function () {
   $('.address__popup--tow').addClass('active');
@@ -488,18 +457,7 @@ window.onscroll = function () {
   }
 
   prevScrollpos = currentScrollPos;
-}; // $('a[href^="#"]').on('click', function(event) {
-//
-//   var target = $( $(this).attr('href') );
-//
-//   if( target.length ) {
-//     event.preventDefault();
-//     $('html, body').animate({
-//       scrollTop: target.offset().top
-//     }, 1500);
-//   }
-//
-// });
+};
 "use strict";
 
 console.log('maxgraph');
