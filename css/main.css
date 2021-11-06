@@ -160,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
   padding-top: 48px;
+  position: relative;
 }
 @media (max-width: 992px) {
   .header {
@@ -4193,6 +4194,7 @@ h1, h2, h3, h4, h5, h6 {
   background-origin: border-box;
   background-clip: content-box, border-box;
   cursor: pointer;
+  height: 396px;
 }
 @media (max-width: 930px) {
   .roadmap__content {
@@ -4625,6 +4627,9 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: translate(0%, 0%);
 }
+.address__popup--one {
+  transition: all 0s;
+}
 @media (max-width: 992px) {
   .address__popup--one {
     right: -66px;
@@ -4639,6 +4644,9 @@ h1, h2, h3, h4, h5, h6 {
   .address__popup--tow {
     right: -66px;
   }
+}
+.address__popup--one-copy {
+  transition: all 0s;
 }
 @media (max-width: 992px) {
   .address__popup--one-copy {
@@ -5259,7 +5267,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__socials ul li a svg:last-child {
   position: absolute;
-  top: -75px;
   left: 0;
   opacity: 0;
 }
