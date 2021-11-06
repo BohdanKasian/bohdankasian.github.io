@@ -1,69 +1,10 @@
 "use strict";
 
-function offset(el) {
-  var rect = el.getBoundingClientRect(),
-      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  return {
-    top: rect.top + scrollTop,
-    left: rect.left + scrollLeft
-  };
-}
-
-var animItems = document.querySelectorAll('._anim-items');
-
-function animOnScroll() {
-  for (var index = 0; index < animItems.length; index++) {
-    var animItem = animItems[index];
-    var animItemHeight = animItem.offsetHeight;
-    var animItemOffset = offset(animItem).top;
-    var animStart = 4;
-    var animatemPoint = $win.height() - animItemHeight / animStart;
-
-    if (animItemHeight > $win.height()) {
-      animatemPoint = $win.height() - $win.height() / animStart;
-    }
-
-    if ($win.scrollTop() > animItemOffset - animatemPoint && $win.scrollTop() < animItemOffset + animItemHeight) {
-      animItem.classList.add('_active');
-    } else {
-      if (!animItem.classList.contains('_anim-not')) {
-        animItem.classList.remove('_active');
-      }
-    }
-  }
-}
-
-var $win = $(window);
 var elem = document.querySelector("#simple-bar");
 var scrollbar = Scrollbar.init(elem, {
   speed: 0.1,
   alwaysShowTracks: true // damping:1
 
-});
-
-if (animItems.length > 0) {
-  setTimeout(function () {
-    animOnScroll();
-  }, 300);
-}
-
-var menuBtn = $('.menu__btn');
-var scrollPrev = 0;
-scrollbar.addListener(function (s) {
-  var scrolled = s.offset.y; // returns “scrollTop” equivalent
-
-  if (scrolled > 100 && scrolled > scrollPrev) {
-    menuBtn.removeClass('_active');
-  } else {
-    menuBtn.addClass('_active');
-  }
-
-  scrollPrev = scrolled;
-
-  if (animItems.length > 0) {
-    animOnScroll();
-  }
 });
 var aboutAnchors = document.querySelector('#aboutAnchors');
 aboutAnchors.addEventListener("click", function (e) {
@@ -135,7 +76,51 @@ $('.ticker').simplemarquee({
   delayBetweenCycles: .1,
   handleHover: false,
   handleResize: false
-}); // var smallMediaQuery = window.matchMedia("(min-width:1025px)"),
+}); //heder anim
+// if ($('body').width() > 1024) {
+
+var animItems = document.querySelectorAll('._anim-items');
+console.log('window');
+
+if (animItems.length > 0) {
+  var animOnScroll = function animOnScroll() {
+    for (var index = 0; index < animItems.length; index++) {
+      var animItem = animItems[index];
+      var animItemHeight = animItem.offsetHeight;
+      var animItemOffset = offset(animItem).top;
+      var animStart = 4;
+      var animatemPoint = window.innerHeight - animItemHeight / animStart;
+
+      if (animItemHeight > window.innerHeight) {
+        animatemPoint = window.innerHeight - window.innerHeight / animStart;
+      }
+
+      if (pageYOffset > animItemOffset - animatemPoint && pageYOffset < animItemOffset + animItemHeight) {
+        animItem.classList.add('_active');
+      } else {
+        if (!animItem.classList.contains('_anim-not')) {
+          animItem.classList.remove('_active');
+        }
+      }
+    }
+  };
+
+  var offset = function offset(el) {
+    var rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return {
+      top: rect.top + scrollTop,
+      left: rect.left + scrollLeft
+    };
+  };
+
+  window.addEventListener("scroll", animOnScroll);
+  setTimeout(function () {
+    animOnScroll();
+  }, 300);
+} // }
+// var smallMediaQuery = window.matchMedia("(min-width:1025px)"),
 //   mediumMediaQuery = window.matchMedia("(min-width:769px) and (max-width:1024px)"),
 //   tableMediaQuery = window.matchMedia("(min-width:581px) and (max-width:768px)"),
 //   mobMediaQuery = window.matchMedia("(min-width:320px) and (max-width:580px)");
@@ -311,6 +296,7 @@ $('.ticker').simplemarquee({
 // tableListener(tableMediaQuery);
 // mobListener(mobMediaQuery);
 // largeListener(largeMediaQuery);
+
 
 if ($('body').width() <= 930) {
   $(".roadmap__header--oct").addClass("active");

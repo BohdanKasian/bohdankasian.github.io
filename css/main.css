@@ -142,15 +142,6 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-.header-mob.header {
-  padding-top: 0;
-}
-@media (min-width: 992px) {
-  .header-mob.header {
-    display: none !important;
-  }
-}
-
 .asd {
   width: 606px;
   height: 620px;
@@ -4486,7 +4477,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
-.address__left-svg svg {
+.address__left-svg img {
   height: 500px;
 }
 .address__title {
