@@ -71,10 +71,23 @@ html {
   overflow-x: hidden;
 }
 
+#simple-bar {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
 body {
   margin: 0;
   font-family: "asd", sans-serif;
   overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+  /* ширина для вертикального скролла */
+  height: 0px;
+  /* высота для горизонтального скролла */
+  background-color: #143861;
 }
 
 ul {
@@ -126,6 +139,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-container {
   background: #00001E;
+  overflow: hidden;
+}
+
+.header-mob.header {
+  padding-top: 0;
+}
+@media (min-width: 992px) {
+  .header-mob.header {
+    display: none !important;
+  }
 }
 
 .asd {
@@ -426,7 +449,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   z-index: 100;
   display: none;
-  transition: right 0.4s ease;
+  transition: right 1s ease;
 }
 @media (max-width: 992px) {
   .header .menu__btn {
@@ -2826,7 +2849,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 .app__desc {
-  margin-top: 16px;
+  margin-top: 22px;
   margin-left: 10px;
 }
 .app__desc b {
@@ -3143,10 +3166,12 @@ h1, h2, h3, h4, h5, h6 {
   .app-mob__item {
     display: flex;
     min-width: 0;
+    min-width: 0px !important;
+    min-width: 348px !important;
     width: 348px !important;
     height: 136px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
 }
 .app-mob__item:before {
@@ -3166,7 +3191,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .app-mob__item .app-mob__icon {
   padding-left: 20px;
-  padding-top: 14px;
+  padding-top: 20px;
 }
 .app-mob__item .app__desc {
   padding: 0;
@@ -3178,7 +3203,7 @@ h1, h2, h3, h4, h5, h6 {
   .app-mob__item:nth-child(1) {
     background-image: url(./../img/app-mob-1.png);
     min-width: 267px !important;
-    width: 269px !important;
+    width: 267px !important;
   }
   .app-mob__item:nth-child(1) .app-mob__icon {
     padding-left: 53px;
@@ -3237,8 +3262,6 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .app-mob__item:nth-child(5) {
     background-image: url(./../img/app-mob-5.png);
-    min-width: 368px !important;
-    width: 368px !important;
   }
   .app-mob__item:nth-child(5) .app-mob__icon {
     padding-left: 40px;
@@ -4170,6 +4193,7 @@ h1, h2, h3, h4, h5, h6 {
   background-origin: border-box;
   background-clip: content-box, border-box;
   cursor: pointer;
+  height: 396px;
 }
 @media (max-width: 930px) {
   .roadmap__content {
@@ -4602,6 +4626,9 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   transform: translate(0%, 0%);
 }
+.address__popup--one {
+  transition: all 0s;
+}
 @media (max-width: 992px) {
   .address__popup--one {
     right: -66px;
@@ -4616,6 +4643,9 @@ h1, h2, h3, h4, h5, h6 {
   .address__popup--tow {
     right: -66px;
   }
+}
+.address__popup--one-copy {
+  transition: all 0s;
 }
 @media (max-width: 992px) {
   .address__popup--one-copy {
@@ -5236,7 +5266,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__socials ul li a svg:last-child {
   position: absolute;
-  top: -75px;
   left: 0;
   opacity: 0;
 }
