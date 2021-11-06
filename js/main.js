@@ -1,22 +1,12 @@
 "use strict";
 
-var elem = document.querySelector("#simple-bar");
-var scrollbar = Scrollbar.init(elem, {
-  speed: 0.1,
-  alwaysShowTracks: true // damping:1
-
-});
-var aboutAnchors = document.querySelector('#aboutAnchors');
-aboutAnchors.addEventListener("click", function (e) {
-  e.preventDefault();
-  scrollbar.scrollIntoView(document.querySelector('#about'));
-});
-var appAnchors = document.querySelector('#appAnchors');
-appAnchors.addEventListener("click", function (e) {
-  e.preventDefault();
-  scrollbar.scrollIntoView(document.querySelector('#app'));
-}); //toggle menu
-
+// var elem = document.querySelector("body");
+// var scrollbar = Scrollbar.init(elem,
+//   {
+//     speed: 0.1,
+//     // damping:1
+//   });
+//toggle menu
 $(document).ready(function () {
   $('.menu__btn').click(function () {
     $('.header__top').addClass('header__top--active');
@@ -56,7 +46,26 @@ $('.ticker').simplemarquee({
   delayBetweenCycles: .1,
   handleHover: false,
   handleResize: false
-}); //heder anim
+}); // document.addEventListener("DOMContentLoaded", () => {
+//   const controller = new ScrollMagic.Controller({refreshInterval: 1})
+//   const chapterNineMoney = new TimelineMax();
+//
+//   chapterNineMoney
+//     .to('.connect-nft__left', 1,
+//       {
+//         x:"0"
+//       })
+//
+//   const chapterNineMoneyScene = new ScrollMagic.Scene({
+//     triggerElement: '.connect-nft',
+//     triggerHook: '1',
+//     duration: '120%',
+//   })
+//     .setTween(chapterNineMoney)
+//
+//     .addTo(controller)
+// })
+//heder anim
 // if ($('body').width() > 1024) {
 
 var animItems = document.querySelectorAll('._anim-items');
@@ -417,7 +426,6 @@ $(".address__copy-btn").hover(function () {
   $('.address__popup--one').addClass('active');
 }, function () {
   $('.address__popup--one').removeClass('active');
-  $('.address__popup--one-copy').removeClass('active');
 });
 $(".contactUs__copy-btn").hover(function () {
   $('.address__popup--tow').addClass('active');
@@ -468,18 +476,7 @@ window.onscroll = function () {
   }
 
   prevScrollpos = currentScrollPos;
-}; // $('a[href^="#"]').on('click', function(event) {
-//
-//   var target = $( $(this).attr('href') );
-//
-//   if( target.length ) {
-//     event.preventDefault();
-//     $('html, body').animate({
-//       scrollTop: target.offset().top
-//     }, 1500);
-//   }
-//
-// });
+};
 "use strict";
 
 console.log('maxgraph');
