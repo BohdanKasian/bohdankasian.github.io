@@ -48,6 +48,9 @@ console.log('window');
 
 if (animItems.length > 0) {
   var animOnScroll = function animOnScroll() {
+    lazyloadApp();
+    lazyloadAppRoadmap();
+
     for (var index = 0; index < animItems.length; index++) {
       var animItem = animItems[index];
       var animItemHeight = animItem.offsetHeight;
