@@ -3560,11 +3560,6 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   will-change: auto;
 }
-@media (max-width: 1024px) {
-  .roadmap__header {
-    transition: none;
-  }
-}
 @media (max-width: 930px) {
   .roadmap__header {
     position: initial;
@@ -3600,11 +3595,6 @@ h1, h2, h3, h4, h5, h6 {
   clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
   transition: all 0.5s ease;
   will-change: auto;
-}
-@media (max-width: 1024px) {
-  .roadmap__header--oct .roadmap__header-svg-o {
-    transition: none;
-  }
 }
 @media (max-width: 930px) {
   .roadmap__header--oct .roadmap__header-svg-o {
@@ -3645,11 +3635,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease;
   will-change: auto;
 }
-@media (max-width: 1024px) {
-  .roadmap__header--oct .roadmap__inside .roadmap__inside-svg-o {
-    transition: none;
-  }
-}
 @media (max-width: 930px) {
   .roadmap__header--oct .roadmap__inside .roadmap__inside-svg-o {
     width: 118px;
@@ -3678,11 +3663,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 1024px) {
-  .roadmap__header--oct .roadmap__inside .roadmap__inside-svg-o span {
-    transition: none;
-  }
 }
 @media (max-width: 930px) {
   .roadmap__header--oct .roadmap__inside .roadmap__inside-svg-o span {
@@ -3827,11 +3807,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease;
   will-change: auto;
 }
-@media (max-width: 1024px) {
-  .roadmap__header--nov .roadmap__header-svg-n {
-    transition: none;
-  }
-}
 @media (max-width: 930px) {
   .roadmap__header--nov .roadmap__header-svg-n {
     width: 150px;
@@ -3870,11 +3845,6 @@ h1, h2, h3, h4, h5, h6 {
   clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
   transition: all 0.5s ease;
   will-change: auto;
-}
-@media (max-width: 1024px) {
-  .roadmap__header--nov .roadmap__inside .roadmap__inside-svg-n {
-    transition: none;
-  }
 }
 @media (max-width: 930px) {
   .roadmap__header--nov .roadmap__inside .roadmap__inside-svg-n {
@@ -4049,11 +4019,6 @@ h1, h2, h3, h4, h5, h6 {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
   transition: all 0.5s ease;
 }
-@media (max-width: 1024px) {
-  .roadmap__header--ter .roadmap__header-svg-t {
-    transition: none;
-  }
-}
 @media (max-width: 930px) {
   .roadmap__header--ter .roadmap__header-svg-t {
     width: 145px;
@@ -4086,11 +4051,6 @@ h1, h2, h3, h4, h5, h6 {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
   transition: all 0.5s ease;
 }
-@media (max-width: 1024px) {
-  .roadmap__header--ter .roadmap__inside .roadmap__inside-svg-t {
-    transition: none;
-  }
-}
 @media (max-width: 930px) {
   .roadmap__header--ter .roadmap__inside .roadmap__inside-svg-t {
     width: 140px;
@@ -4118,11 +4078,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 1024px) {
-  .roadmap__header--ter .roadmap__inside .roadmap__inside-svg-t span {
-    transition: none;
-  }
 }
 @media (max-width: 930px) {
   .roadmap__header--ter .roadmap__inside .roadmap__inside-svg-t span {
@@ -5199,7 +5154,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 768px) {
   .info-block__bottom {
-    margin-top: 14px;
+    margin-top: 5px;
   }
 }
 .info-block__item {
