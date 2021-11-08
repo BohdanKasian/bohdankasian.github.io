@@ -5165,7 +5165,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .description {
-  font-family: "Antenna-Bold";
+  font-family: "Antenna-Medium";
   font-weight: 500;
   font-size: 36px;
   line-height: 104%;
@@ -5227,12 +5227,22 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(7px);
   }
 }
+@media (max-width: 768px) {
+  .info-block__audit {
+    width: calc(43% - 3px);
+  }
+}
 .info-block__whitepaper {
   transform: translateX(-15px);
 }
 @media (max-width: 992px) {
   .info-block__whitepaper {
     transform: translateX(-7px);
+  }
+}
+@media (max-width: 768px) {
+  .info-block__whitepaper {
+    width: calc(57% - 3px);
   }
 }
 .info-block__telegram {
