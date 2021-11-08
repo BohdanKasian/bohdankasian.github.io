@@ -166,9 +166,18 @@
 .info-block__item {
   width: calc(50% - 0px);
 }
+.info-block__item img:last-child {
+  display: none;
+}
 @media (max-width: 768px) {
   .info-block__item {
     width: calc(50% - 3px);
+  }
+  .info-block__item img:first-child {
+    display: none;
+  }
+  .info-block__item img:last-child {
+    display: block;
   }
 }
 .info-block__item img {
