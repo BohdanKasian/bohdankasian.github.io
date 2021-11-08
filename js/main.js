@@ -35,7 +35,7 @@ var hideWindiwsMenu = function hideWindiwsMenu() {
 
 var animItems = document.querySelectorAll('._anim-items');
 
-function lazyloadBlock(blockId, html) {
+function lazyloadBlock(blockId, html, setSwiper, setEvents) {
   var wt = $(window).scrollTop(); //* top of the window
 
   var wb = wt + $(window).height(); //* bottom of the window
@@ -43,12 +43,24 @@ function lazyloadBlock(blockId, html) {
   $(blockId).each(function () {
     var ot = $(this).offset().top - 1000; //* top of object (i.e. advertising div)
 
-    var ob = ot + $(this).height(); //* bottom of object
-
     if (!$(this).attr("loaded") && wb >= ot) {
       $(this).html(html);
       $(this).attr("loaded", true);
       animItems = document.querySelectorAll('._anim-items');
+
+      if (setSwiper) {
+        if ($('body').width() <= 768) {
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            spaceBetween: -20,
+            freeMode: true
+          });
+        }
+      }
+
+      if (setEvents) {
+        setEvents();
+      }
     }
   });
 }
@@ -70,11 +82,11 @@ if (animItems.length > 0) {
     lazyloadBlock(aboutLazyLoad, aboutLazyLoadHTML);
     lazyloadBlock(connectNftLazyLoad, connectNftLazyLoadHTML);
     lazyloadBlock(appLazyLoad, appLazyLoadHTML);
-    lazyloadBlock(appMobLazyLoad, appMobLazyLoadHTML);
-    lazyloadBlock(roadmapLazyLoad, roadmapLazyLoadHTML);
+    lazyloadBlock(appMobLazyLoad, appMobLazyLoadHTML, true);
+    lazyloadBlock(roadmapLazyLoad, roadmapLazyLoadHTML, setRoadmapEvents);
     lazyloadBlock(infoLazyLoad, infoLazyLoadHTML);
-    lazyloadBlock(addressLazyLoad, addressLazyLoadHTML);
-    lazyloadBlock(contactUsLazyLoad, contactUsLazyLoadHTML);
+    lazyloadBlock(addressLazyLoad, addressLazyLoadHTML, addressEvents);
+    lazyloadBlock(contactUsLazyLoad, contactUsLazyLoadHTML, contactUsEvents);
 
     for (var index = 0; index < animItems.length; index++) {
       var animItem = animItems[index];
@@ -288,121 +300,7 @@ if (animItems.length > 0) {
 // tableListener(tableMediaQuery);
 // mobListener(mobMediaQuery);
 // largeListener(largeMediaQuery);
-
-
-if ($('body').width() <= 930) {
-  $(".roadmap__header--oct").addClass("active");
-  $(".roadmap__content--oct").addClass("active");
-  $(".roadmap__content--oct").children('ul').addClass("_active");
-}
-
-$(".roadmap__header--oct span").hover(function () {
-  $('.roadmap__header--oct').addClass("active");
-  $(".roadmap__content--oct").addClass("active");
-  $(".roadmap__line-oct:last").addClass("active");
-  $(".roadmap__content--oct").children('ul').addClass("_active");
-}, function () {
-  $('.roadmap__header--oct').removeClass("active");
-  $(".roadmap__content--oct").removeClass("active");
-  $(".roadmap__line-oct:last").removeClass("active");
-  $(".roadmap__content--oct").children('ul').removeClass("_active");
-});
-$(".roadmap__header--nov span").hover(function () {
-  $('.roadmap__header--nov').addClass("active");
-  $(".roadmap__header--oct").addClass("active--nov");
-  $(".roadmap__content--nov").addClass("active");
-  $(".roadmap__line-nov:last").addClass("active");
-  $(".roadmap__content--nov").children('ul').addClass("_active");
-
-  if ($('body').width() <= 930) {
-    $(".roadmap__header--oct").removeClass("active");
-    $(".roadmap__content--oct").removeClass("active");
-  }
-}, function () {
-  $('.roadmap__header--nov').removeClass("active");
-  $(".roadmap__header--oct").removeClass("active--nov");
-  $(".roadmap__content--nov").removeClass("active");
-  $(".roadmap__line-nov:last").removeClass("active");
-  $(".roadmap__content--nov").children('ul').removeClass("_active");
-});
-$(".roadmap__header--ter span").hover(function () {
-  $('.roadmap__header--ter').addClass("active");
-  $(".roadmap__header--nov").addClass("active--ter");
-  $(".roadmap__header--oct").addClass("active--nov");
-  $(".roadmap__content--ter").addClass("active");
-  $(".roadmap__line-ter:last").addClass("active");
-  $(".roadmap__content--ter").children('ul').addClass("_active");
-
-  if ($('body').width() <= 930) {
-    $(".roadmap__header--oct").removeClass("active");
-    $(".roadmap__content--oct").removeClass("active");
-  }
-}, function () {
-  $('.roadmap__header--ter').removeClass("active");
-  $(".roadmap__header--nov").removeClass("active--ter");
-  $(".roadmap__header--oct").removeClass("active--nov");
-  $(".roadmap__content--ter").removeClass("active");
-  $(".roadmap__line-ter:last").removeClass("active");
-  $(".roadmap__content--ter").children('ul').removeClass("_active");
-}); //////////////
-
-$(".roadmap__content--oct").hover(function () {
-  $('.roadmap__header--oct').addClass("active");
-  $(".roadmap__content--oct").addClass("active");
-  $(".roadmap__line-oct:last").addClass("active");
-  $(".roadmap__content--oct").children('ul').addClass("_active");
-}, function () {
-  $('.roadmap__header--oct').removeClass("active");
-  $(".roadmap__content--oct").removeClass("active");
-  $(".roadmap__line-oct:last").removeClass("active");
-  $(".roadmap__content--oct").children('ul').removeClass("_active");
-});
-$(".roadmap__content--nov").hover(function () {
-  $('.roadmap__header--nov').addClass("active");
-  $(".roadmap__header--oct").addClass("active--nov");
-  $(".roadmap__content--nov").addClass("active");
-  $(".roadmap__line-nov:last").addClass("active");
-  $(".roadmap__content--nov").children('ul').addClass("_active");
-
-  if ($('body').width() <= 930) {
-    $(".roadmap__header--oct").removeClass("active");
-    $(".roadmap__content--oct").removeClass("active");
-  }
-}, function () {
-  $('.roadmap__header--nov').removeClass("active");
-  $(".roadmap__header--oct").removeClass("active--nov");
-  $(".roadmap__content--nov").removeClass("active");
-  $(".roadmap__line-nov:last").removeClass("active");
-  $(".roadmap__content--nov").children('ul').removeClass("_active");
-});
-$(".roadmap__content--ter").hover(function () {
-  $('.roadmap__header--ter').addClass("active");
-  $(".roadmap__header--nov").addClass("active--ter");
-  $(".roadmap__header--oct").addClass("active--nov");
-  $(".roadmap__content--ter").addClass("active");
-  $(".roadmap__line-ter:last").addClass("active");
-  $(".roadmap__content--ter").children('ul').addClass("_active");
-
-  if ($('body').width() <= 930) {
-    $(".roadmap__header--oct").removeClass("active");
-    $(".roadmap__content--oct").removeClass("active");
-  }
-}, function () {
-  $('.roadmap__header--ter').removeClass("active");
-  $(".roadmap__header--nov").removeClass("active--ter");
-  $(".roadmap__header--oct").removeClass("active--nov");
-  $(".roadmap__content--ter").removeClass("active");
-  $(".roadmap__line-ter:last").removeClass("active");
-  $(".roadmap__content--ter").children('ul').removeClass("_active");
-});
-
-if ($('body').width() <= 768) {
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: -20,
-    freeMode: true
-  });
-} //copy text
+//copy text
 
 
 function copyData(containerid) {
@@ -425,30 +323,6 @@ function copyDataTwo(containeridTwo) {
   window.getSelection().removeAllRanges();
 }
 
-$(".address__copy-btn").hover(function () {
-  $('.address__popup--one').addClass('active');
-}, function () {
-  $('.address__popup--one').removeClass('active');
-});
-$(".contactUs__copy-btn").hover(function () {
-  $('.address__popup--tow').addClass('active');
-}, function () {
-  $('.address__popup--tow').removeClass('active');
-});
-$(".address__copy-btn").click(function () {
-  $('.address__popup--one-copy').addClass('active');
-  $('.address__popup--one').removeClass('active');
-  setTimeout(function () {
-    $('.address__popup--one-copy').removeClass('active');
-  }, 2000);
-});
-$(".contactUs__copy-btn").click(function () {
-  $('.address__popup--tow-copy').addClass('active');
-  $('.address__popup--tow').removeClass('active');
-  setTimeout(function () {
-    $('.address__popup--tow-copy').removeClass('active');
-  }, 2000);
-});
 var scrolling = false;
 $(window).scroll(function (event) {
   scrolling = true;
@@ -486,6 +360,145 @@ var contactUsLazyLoadHTML = "<div class=\"contactUs__left\">\n    <div class=\"c
 "use strict";
 
 console.log('maxgraph');
+"use strict";
+
+function setRoadmapEvents() {
+  if ($('body').width() <= 930) {
+    $(".roadmap__header--oct").addClass("active");
+    $(".roadmap__content--oct").addClass("active");
+    $(".roadmap__content--oct").children('ul').addClass("_active");
+  }
+
+  $(".roadmap__header--oct span").hover(function () {
+    $('.roadmap__header--oct').addClass("active");
+    $(".roadmap__content--oct").addClass("active");
+    $(".roadmap__line-oct:last").addClass("active");
+    $(".roadmap__content--oct").children('ul').addClass("_active");
+  }, function () {
+    $('.roadmap__header--oct').removeClass("active");
+    $(".roadmap__content--oct").removeClass("active");
+    $(".roadmap__line-oct:last").removeClass("active");
+    $(".roadmap__content--oct").children('ul').removeClass("_active");
+  });
+  $(".roadmap__header--nov span").hover(function () {
+    $('.roadmap__header--nov').addClass("active");
+    $(".roadmap__header--oct").addClass("active--nov");
+    $(".roadmap__content--nov").addClass("active");
+    $(".roadmap__line-nov:last").addClass("active");
+    $(".roadmap__content--nov").children('ul').addClass("_active");
+
+    if ($('body').width() <= 930) {
+      $(".roadmap__header--oct").removeClass("active");
+      $(".roadmap__content--oct").removeClass("active");
+    }
+  }, function () {
+    $('.roadmap__header--nov').removeClass("active");
+    $(".roadmap__header--oct").removeClass("active--nov");
+    $(".roadmap__content--nov").removeClass("active");
+    $(".roadmap__line-nov:last").removeClass("active");
+    $(".roadmap__content--nov").children('ul').removeClass("_active");
+  });
+  $(".roadmap__header--ter span").hover(function () {
+    $('.roadmap__header--ter').addClass("active");
+    $(".roadmap__header--nov").addClass("active--ter");
+    $(".roadmap__header--oct").addClass("active--nov");
+    $(".roadmap__content--ter").addClass("active");
+    $(".roadmap__line-ter:last").addClass("active");
+    $(".roadmap__content--ter").children('ul').addClass("_active");
+
+    if ($('body').width() <= 930) {
+      $(".roadmap__header--oct").removeClass("active");
+      $(".roadmap__content--oct").removeClass("active");
+    }
+  }, function () {
+    $('.roadmap__header--ter').removeClass("active");
+    $(".roadmap__header--nov").removeClass("active--ter");
+    $(".roadmap__header--oct").removeClass("active--nov");
+    $(".roadmap__content--ter").removeClass("active");
+    $(".roadmap__line-ter:last").removeClass("active");
+    $(".roadmap__content--ter").children('ul').removeClass("_active");
+  }); //////////////
+
+  $(".roadmap__content--oct").hover(function () {
+    $('.roadmap__header--oct').addClass("active");
+    $(".roadmap__content--oct").addClass("active");
+    $(".roadmap__line-oct:last").addClass("active");
+    $(".roadmap__content--oct").children('ul').addClass("_active");
+  }, function () {
+    $('.roadmap__header--oct').removeClass("active");
+    $(".roadmap__content--oct").removeClass("active");
+    $(".roadmap__line-oct:last").removeClass("active");
+    $(".roadmap__content--oct").children('ul').removeClass("_active");
+  });
+  $(".roadmap__content--nov").hover(function () {
+    $('.roadmap__header--nov').addClass("active");
+    $(".roadmap__header--oct").addClass("active--nov");
+    $(".roadmap__content--nov").addClass("active");
+    $(".roadmap__line-nov:last").addClass("active");
+    $(".roadmap__content--nov").children('ul').addClass("_active");
+
+    if ($('body').width() <= 930) {
+      $(".roadmap__header--oct").removeClass("active");
+      $(".roadmap__content--oct").removeClass("active");
+    }
+  }, function () {
+    $('.roadmap__header--nov').removeClass("active");
+    $(".roadmap__header--oct").removeClass("active--nov");
+    $(".roadmap__content--nov").removeClass("active");
+    $(".roadmap__line-nov:last").removeClass("active");
+    $(".roadmap__content--nov").children('ul').removeClass("_active");
+  });
+  $(".roadmap__content--ter").hover(function () {
+    $('.roadmap__header--ter').addClass("active");
+    $(".roadmap__header--nov").addClass("active--ter");
+    $(".roadmap__header--oct").addClass("active--nov");
+    $(".roadmap__content--ter").addClass("active");
+    $(".roadmap__line-ter:last").addClass("active");
+    $(".roadmap__content--ter").children('ul').addClass("_active");
+
+    if ($('body').width() <= 930) {
+      $(".roadmap__header--oct").removeClass("active");
+      $(".roadmap__content--oct").removeClass("active");
+    }
+  }, function () {
+    $('.roadmap__header--ter').removeClass("active");
+    $(".roadmap__header--nov").removeClass("active--ter");
+    $(".roadmap__header--oct").removeClass("active--nov");
+    $(".roadmap__content--ter").removeClass("active");
+    $(".roadmap__line-ter:last").removeClass("active");
+    $(".roadmap__content--ter").children('ul').removeClass("_active");
+  });
+}
+
+function addressEvents() {
+  $(".address__copy-btn").hover(function () {
+    $('.address__popup--one').addClass('active');
+  }, function () {
+    $('.address__popup--one').removeClass('active');
+  });
+  $(".address__copy-btn").click(function () {
+    $('.address__popup--one-copy').addClass('active');
+    $('.address__popup--one').removeClass('active');
+    setTimeout(function () {
+      $('.address__popup--one-copy').removeClass('active');
+    }, 2000);
+  });
+}
+
+function contactUsEvents() {
+  $(".contactUs__copy-btn").hover(function () {
+    $('.address__popup--tow').addClass('active');
+  }, function () {
+    $('.address__popup--tow').removeClass('active');
+  });
+  $(".contactUs__copy-btn").click(function () {
+    $('.address__popup--tow-copy').addClass('active');
+    $('.address__popup--tow').removeClass('active');
+    setTimeout(function () {
+      $('.address__popup--tow-copy').removeClass('active');
+    }, 2000);
+  });
+}
 /**
   * название функции
   *
