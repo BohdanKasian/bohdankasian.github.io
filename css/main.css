@@ -271,6 +271,7 @@ h1, h2, h3, h4, h5, h6 {
     background-size: 100% 100%;
     z-index: 105;
     opacity: 1;
+    will-change: auto;
   }
 }
 @media (max-width: 480px) {
@@ -395,6 +396,7 @@ h1, h2, h3, h4, h5, h6 {
   top: -31px;
   left: 0;
   opacity: 0;
+  will-change: auto;
 }
 @media (max-width: 1170px) {
   .header__socials li a svg:last-child {
@@ -420,6 +422,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 100;
   display: none;
   transition: all 1s ease;
+  will-change: auto;
 }
 @media (max-width: 992px) {
   .header .menu__btn {
@@ -492,6 +495,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   display: none;
   transition: 0.5s;
+  will-change: auto;
 }
 @media (max-width: 480px) {
   .header .menu__btn-mob {
@@ -574,6 +578,7 @@ h1, h2, h3, h4, h5, h6 {
 .header .header__top--active {
   transition: all 0.4s ease;
   transform: translateX(0%);
+  will-change: auto;
 }
 .header .banner {
   display: flex;
@@ -700,6 +705,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-120%);
   transition: all 0.8s ease 0s;
   opacity: 0;
+  will-change: auto;
 }
 @media (max-width: 1380px) {
   .header .banner__logo svg {
@@ -741,6 +747,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-120%);
   transition: all 0.8s ease 0s;
   opacity: 0;
+  will-change: auto;
 }
 .header .banner__title._active {
   transform: translateX(0);
@@ -751,6 +758,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-150%);
   transition: all 0.8s ease 0.4s;
   opacity: 0;
+  will-change: auto;
 }
 .header .banner__link._active {
   transform: translateX(0);
@@ -777,6 +785,7 @@ h1, h2, h3, h4, h5, h6 {
 .header .banner .banner-items-desc__item {
   position: absolute;
   opacity: 0;
+  will-change: auto;
 }
 .header .banner .banner-items-desc__item:nth-child(1) {
   top: 0;
@@ -784,6 +793,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: spinHorizontal-1 normal forwards ease-in-out;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  will-change: auto;
 }
 @media (max-width: 1024px) {
   .header .banner .banner-items-desc__item:nth-child(1) {
@@ -799,6 +809,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: spinHorizontal-2 normal forwards ease-in-out;
   -webkit-animation-duration: 1.2s;
   animation-duration: 1.2s;
+  will-change: auto;
 }
 @media (max-width: 1024px) {
   .header .banner .banner-items-desc__item:nth-child(2) {
@@ -815,6 +826,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: spinHorizontal-3 normal forwards ease-in-out;
   -webkit-animation-duration: 0.9s;
   animation-duration: 0.9s;
+  will-change: auto;
 }
 @media (max-width: 1024px) {
   .header .banner .banner-items-desc__item:nth-child(3) {
@@ -831,6 +843,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: spinHorizontal-4 normal forwards ease-in-out;
   -webkit-animation-duration: 1.1s;
   animation-duration: 1.1s;
+  will-change: auto;
 }
 @media (max-width: 1024px) {
   .header .banner .banner-items-desc__item:nth-child(4) {
@@ -847,6 +860,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: spinHorizontal-5 normal forwards ease-in-out;
   -webkit-animation-duration: 1.1s;
   animation-duration: 1.1s;
+  will-change: auto;
 }
 @media (max-width: 1024px) {
   .header .banner .banner-items-desc__item:nth-child(5) {
@@ -918,12 +932,14 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   opacity: 0;
   transition: all 1s ease-in;
+  will-change: auto;
 }
 .header .banner__svg-top .mob-icons__item:nth-child(1) {
   -webkit-animation: spinHorizontal-mob-1 normal forwards ease-in-out;
   animation: spinHorizontal-mob-1 normal forwards ease-in-out;
   -webkit-animation-duration: 0.8s;
   animation-duration: 0.8s;
+  will-change: auto;
 }
 @media (max-width: 580px) {
   .header .banner__svg-top .mob-icons__item:nth-child(1) {
@@ -939,6 +955,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: spinHorizontal-mob-2 normal forwards ease-in-out;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  will-change: auto;
 }
 @media (max-width: 580px) {
   .header .banner__svg-top .mob-icons__item:nth-child(2) {
@@ -1000,6 +1017,7 @@ h1, h2, h3, h4, h5, h6 {
 .header .banner__svg-bottom .mob-icons-b__item {
   position: absolute;
   opacity: 0;
+  will-change: auto;
 }
 .header .banner__svg-bottom .mob-icons-b__item:nth-child(1) {
   top: 216px;
@@ -1008,6 +1026,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   left: -320px;
+  will-change: auto;
 }
 @media (max-width: 580px) {
   .header .banner__svg-bottom .mob-icons-b__item:nth-child(1) {
@@ -1029,6 +1048,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: spinHorizontal-mob-4 normal forwards ease-in-out;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  will-change: auto;
 }
 @media (max-width: 580px) {
   .header .banner__svg-bottom .mob-icons-b__item:nth-child(2) {
@@ -1045,6 +1065,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: spinHorizontal-mob-5 normal forwards ease-in-out;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  will-change: auto;
 }
 @media (max-width: 580px) {
   .header .banner__svg-bottom .mob-icons-b__item:nth-child(3) {
@@ -1061,6 +1082,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: spinHorizontal-mob-6 normal forwards ease-in-out;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  will-change: auto;
 }
 @media (max-width: 580px) {
   .header .banner__svg-bottom .mob-icons-b__item:nth-child(4) {
@@ -2041,6 +2063,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-120%);
   transition: all 0.8s ease 0s;
   opacity: 0;
+  will-change: auto;
 }
 .about__desc._active {
   transform: translateY(0%);
@@ -2213,6 +2236,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid rgba(111, 220, 255, 0.7);
   opacity: 0;
   z-index: 1;
+  will-change: auto;
 }
 .about__contactUs a:hover {
   border-radius: 8px;
@@ -2305,6 +2329,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-120%);
   transition: all 0.8s ease 0s;
   opacity: 0;
+  will-change: auto;
 }
 @media (max-width: 480px) {
   .about__connecting .about-animate__item:nth-child(2) {
@@ -2317,6 +2342,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(120%);
   transition: all 0.8s ease 0s;
   opacity: 0;
+  will-change: auto;
 }
 @media (max-width: 480px) {
   .about__connecting .about-animate__item:nth-child(3) {
@@ -2329,6 +2355,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(50%);
   transition: all 0.8s ease 0s;
   opacity: 0;
+  will-change: auto;
 }
 @media (max-width: 480px) {
   .about__connecting .about-animate__item:nth-child(4) {
@@ -2341,6 +2368,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(120%);
   transition: all 0.8s ease 0s;
   opacity: 0;
+  will-change: auto;
 }
 @media (max-width: 480px) {
   .about__connecting .about-animate__item:nth-child(5) {
@@ -2584,6 +2612,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-120%);
   transition: all 0.8s ease 0s;
   opacity: 0;
+  will-change: auto;
 }
 .connect-nft__left._active {
   transform: translateX(0%);
@@ -2616,6 +2645,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(120%);
   transition: all 0.8s ease 0s;
   opacity: 0;
+  will-change: auto;
 }
 .connect-nft__right._active {
   transform: translateX(0%);
@@ -2703,6 +2733,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 390px;
   height: 890px;
   opacity: 0.4;
+  will-change: auto;
 }
 @media (max-width: 1280px) {
   .app__center:before {
@@ -2735,6 +2766,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 190px;
   width: 390px;
   opacity: 0.4;
+  will-change: auto;
 }
 @media (max-width: 1280px) {
   .app__item:before {
@@ -2764,6 +2796,7 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   height: 290px;
   opacity: 0.4;
+  will-change: auto;
 }
 .app__item:last-child:hover:before {
   background-image: -webkit-image-set(url("./../img/app/Vector-last-h.png") 1x, url("./../img/app/Vector-last-h_x2.png") 2x);
@@ -2937,6 +2970,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 258px;
   width: 515px;
   background-size: contain;
+  will-change: auto;
 }
 @media (max-width: 1000px) {
   .app-mob__desc-top:before {
@@ -3149,6 +3183,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 341px;
   opacity: 0.4;
   background-size: contain;
+  will-change: auto;
 }
 @media (max-width: 768px) {
   .app-mob__item:before {
@@ -3367,6 +3402,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .roadmap__line {
   position: absolute;
+  will-change: auto;
 }
 .roadmap__line:nth-child(1) {
   left: 0;
@@ -3374,6 +3410,7 @@ h1, h2, h3, h4, h5, h6 {
 .roadmap__line:nth-child(2) {
   left: 50%;
   transform: translateX(-50%);
+  will-change: auto;
 }
 .roadmap__line:nth-child(3) {
   right: 290px;
@@ -3381,9 +3418,11 @@ h1, h2, h3, h4, h5, h6 {
 .roadmap__line-nov {
   position: absolute;
   transition: all 0.5s ease;
+  will-change: auto;
 }
 .roadmap__line-nov:last-child {
   opacity: 0;
+  will-change: auto;
 }
 .roadmap__line-nov.active {
   opacity: 1;
@@ -3392,9 +3431,11 @@ h1, h2, h3, h4, h5, h6 {
 .roadmap__line-oct {
   position: absolute;
   transition: all 0.5s ease;
+  will-change: auto;
 }
 .roadmap__line-oct:last-child {
   opacity: 0;
+  will-change: auto;
 }
 .roadmap__line-oct.active {
   opacity: 1;
@@ -3404,9 +3445,11 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 0;
   transition: all 0.5s ease;
+  will-change: auto;
 }
 .roadmap__line-ter:last-child {
   opacity: 0;
+  will-change: auto;
 }
 .roadmap__line-ter.active {
   opacity: 1;
@@ -3515,6 +3558,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   transition: all 0.5s ease;
   cursor: pointer;
+  will-change: auto;
 }
 @media (max-width: 930px) {
   .roadmap__header {
@@ -3545,6 +3589,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
   transition: all 0.5s ease;
+  will-change: auto;
 }
 @media (max-width: 930px) {
   .roadmap__header--oct .roadmap__header-svg-o {
@@ -3583,6 +3628,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
   transition: all 0.5s ease;
+  will-change: auto;
 }
 @media (max-width: 930px) {
   .roadmap__header--oct .roadmap__inside .roadmap__inside-svg-o {
@@ -3605,6 +3651,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 33px;
   width: 195px;
   transition: all 2s ease;
+  will-change: auto;
   left: 45%;
   height: 75px;
   width: 264px;
@@ -3753,6 +3800,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
   clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
   transition: all 0.5s ease;
+  will-change: auto;
 }
 @media (max-width: 930px) {
   .roadmap__header--nov .roadmap__header-svg-n {
@@ -3791,6 +3839,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
   clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
   transition: all 0.5s ease;
+  will-change: auto;
 }
 @media (max-width: 930px) {
   .roadmap__header--nov .roadmap__inside .roadmap__inside-svg-n {
@@ -4017,6 +4066,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 33px;
   width: 197px;
   transition: all 2s ease;
+  will-change: auto;
   left: 55%;
   height: 75px;
   width: 285px;
@@ -4089,6 +4139,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   transition: all 0.5s ease;
+  will-change: auto;
 }
 @media (max-width: 930px) {
   .roadmap__inside {
@@ -4568,6 +4619,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   transform: translate(0%, 60%);
   transition: all 0.4s ease-in;
+  will-change: auto;
 }
 @media (max-width: 992px) {
   .address__popup {
@@ -4849,6 +4901,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .contactUs__email span svg:last-child {
   opacity: 0;
+  will-change: auto;
 }
 .contactUs__email span svg:hover:last-child {
   opacity: 1;
@@ -4935,6 +4988,245 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-timer {
   color: #fff;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.js-timer {
+  padding-bottom: 50px;
+  margin-top: 90px;
+}
+.js-timer span {
+  color: #e9e9e9 !important;
+  font-family: "Antenna-Bold" !important;
+}
+@media (max-width: 992px) {
+  .js-timer span {
+    font-size: 38px;
+  }
+}
+.js-timer .timer-element {
+  position: relative;
+  min-width: 90px;
+}
+@media (max-width: 992px) {
+  .js-timer .timer-element {
+    min-width: 53px;
+  }
+}
+.js-timer .timer-element:before {
+  content: "";
+  width: 1px;
+  height: 100px;
+  background: #e9e9e9;
+  right: -20px;
+  z-index: 50;
+  position: absolute;
+  opacity: 0.45;
+}
+@media (max-width: 992px) {
+  .js-timer .timer-element:before {
+    height: 87px;
+  }
+}
+.js-timer .timer-element:nth-child(1):after {
+  content: "Days";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Antenna-Bold" !important;
+}
+@media (max-width: 992px) {
+  .js-timer .timer-element:nth-child(1):after {
+    font-size: 12px;
+    bottom: -15px;
+  }
+}
+.js-timer .timer-element:nth-child(3):after {
+  content: "Hours";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Antenna-Bold" !important;
+}
+@media (max-width: 992px) {
+  .js-timer .timer-element:nth-child(3):after {
+    font-size: 12px;
+    bottom: -15px;
+  }
+}
+.js-timer .timer-element:nth-child(5):after {
+  content: "Minutes";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Antenna-Bold" !important;
+}
+@media (max-width: 992px) {
+  .js-timer .timer-element:nth-child(5):after {
+    font-size: 12px;
+    bottom: -15px;
+  }
+}
+.js-timer .timer-element:nth-child(7):after {
+  content: "Seconds";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Antenna-Bold" !important;
+}
+@media (max-width: 992px) {
+  .js-timer .timer-element:nth-child(7):after {
+    font-size: 12px;
+    bottom: -15px;
+  }
+}
+.js-timer .timer-element:nth-child(7):before {
+  content: "";
+  width: 1px;
+  height: 100px;
+  background: #e9e9e9;
+  right: -20px;
+  z-index: 50;
+  position: absolute;
+  opacity: 0.45;
+  display: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.logo img {
+  height: auto;
+}
+@media (max-width: 768px) {
+  .logo img {
+    width: 80%;
+  }
+}
+
+.description {
+  font-family: "Antenna-Bold";
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 104%;
+  margin: 40px 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .description {
+    font-size: 18px;
+    line-height: 104%;
+  }
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-block__top, .info-block__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info-block__bottom {
+  margin-top: 24px;
+}
+@media (max-width: 768px) {
+  .info-block__bottom {
+    margin-top: 14px;
+  }
+}
+.info-block__item {
+  width: calc(50% - 0px);
+}
+@media (max-width: 768px) {
+  .info-block__item {
+    width: calc(50% - 3px);
+  }
+}
+.info-block__item svg {
+  width: 100%;
+  transition: transform 0.3s;
+  height: 100%;
+}
+@media (max-width: 992px) {
+  .info-block__item svg {
+    height: auto;
+  }
+}
+.info-block__item:hover svg {
+  transform: scale3d(1.05, 1.05, 1.05);
+  transition: transform 0.3s;
+}
+.info-block__audit {
+  transform: translateX(15px);
+}
+@media (max-width: 992px) {
+  .info-block__audit {
+    transform: translateX(7px);
+  }
+}
+.info-block__whitepaper {
+  transform: translateX(-15px);
+}
+@media (max-width: 992px) {
+  .info-block__whitepaper {
+    transform: translateX(-7px);
+  }
+}
+.info-block__telegram {
+  transform: translateX(15px);
+}
+.info-block__telegram svg:last-child {
+  display: none;
+}
+@media (max-width: 992px) {
+  .info-block__telegram {
+    transform: translateX(7px);
+  }
+}
+@media (max-width: 768px) {
+  .info-block__telegram {
+    width: calc(57% - 3px);
+  }
+  .info-block__telegram svg:first-child {
+    display: none;
+  }
+  .info-block__telegram svg:last-child {
+    display: block;
+  }
+}
+.info-block__dx {
+  transform: translateX(-15px);
+}
+.info-block__dx svg:last-child {
+  display: none;
+}
+@media (max-width: 992px) {
+  .info-block__dx {
+    transform: translateX(-7px);
+  }
+}
+@media (max-width: 768px) {
+  .info-block__dx {
+    width: calc(43% - 3px);
+  }
+  .info-block__dx svg:first-child {
+    display: none;
+  }
+  .info-block__dx svg:last-child {
+    display: block;
+  }
 }
 
 .footer {
@@ -5226,6 +5518,7 @@ h1, h2, h3, h4, h5, h6 {
   top: -75px;
   left: 0;
   opacity: 0;
+  will-change: auto;
 }
 @media (max-width: 768px) {
   .footer__socials ul li a svg:last-child {
@@ -5257,6 +5550,7 @@ h1, h2, h3, h4, h5, h6 {
   top: -87px;
   left: 0;
   opacity: 0;
+  will-change: auto;
 }
 @media (max-width: 768px) {
   .footer__socials ul li:last-child a img:last-child {
