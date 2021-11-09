@@ -7,6 +7,10 @@
   display: flex;
   align-items: center;
 }
+.page-timer__container {
+  margin: 0 auto;
+}
+
 .js-timer {
   padding-bottom: 50px;
   margin-top: 90px;
@@ -152,11 +156,11 @@
 }
 .info-block__top, .info-block__bottom {
   display: flex;
-  align-items: center;
+  align-items: initial;
   justify-content: space-between;
 }
 .info-block__bottom {
-  margin-top: 24px;
+  margin-top: 13px;
 }
 @media (max-width: 768px) {
   .info-block__bottom {
