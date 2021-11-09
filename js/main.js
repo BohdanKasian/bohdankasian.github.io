@@ -86,8 +86,8 @@ if (animItems.length > 0) {
       lazyloadBlock(appLazyLoad, appLazyLoadHTML);
     }
 
-    lazyloadBlock(appMobLazyLoad, appMobLazyLoadHTML, true);
-    lazyloadBlock(roadmapLazyLoad, roadmapLazyLoadHTML, false, setRoadmapEvents);
+    lazyloadBlock(appMobLazyLoad, appMobLazyLoadHTML, true); // lazyloadBlock(roadmapLazyLoad,roadmapLazyLoadHTML,false, setRoadmapEvents)
+
     lazyloadBlock(infoLazyLoad, infoLazyLoadHTML);
     lazyloadBlock(addressLazyLoad, addressLazyLoadHTML, false, addressEvents);
     lazyloadBlock(contactUsLazyLoad, contactUsLazyLoadHTML, false, contactUsEvents);
