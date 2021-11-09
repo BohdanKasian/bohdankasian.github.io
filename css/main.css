@@ -4374,7 +4374,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .info__container {
-  background-image: url(./../img/info-bg.png);
+  background-image: url(./../img/info-bg.svg);
   background-repeat: no-repeat;
   color: #fff;
   display: flex;
@@ -4403,7 +4403,7 @@ h1, h2, h3, h4, h5, h6 {
   .info__container {
     width: 783px;
     margin-bottom: 70px;
-    background-image: url(./../img/tablet-toke.png);
+    background-image: url("./../img/table-toke.svg");
     flex-direction: column;
     height: 194px;
   }
@@ -4421,7 +4421,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 680px) {
   .info__container {
-    background-image: url(./../img//ingo-bg-mob.png);
+    background-image: url(./../img/info-bg-mob.svg);
     height: 150px;
     width: 320px;
     flex-direction: column;
