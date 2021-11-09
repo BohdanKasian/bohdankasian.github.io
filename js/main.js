@@ -385,8 +385,6 @@ console.log('maxgraph');
 "use strict";
 
 function setRoadmapEvents() {
-  console.log('road');
-
   if ($('body').width() <= 930) {
     $(".roadmap__header--oct").addClass("active");
     $(".roadmap__content--oct").addClass("active");
