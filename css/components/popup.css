@@ -35,7 +35,7 @@
 }
 .popup__content h3 {
   font-weight: 500;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 104%;
   color: #FFFFFF;
 }
@@ -53,6 +53,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.popup__btn img {
+  width: 100%;
 }
 .popup__btn:hover {
   cursor: pointer;
