@@ -416,6 +416,9 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
   top: 0;
 }
+.header__socials li a:last-child:hover svg:last-child {
+  top: 2px;
+}
 .header .menu__btn {
   align-items: center;
   position: fixed;
@@ -581,7 +584,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: transparent;
 }
 .header .header__top--active {
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
   transform: translateX(0%);
   will-change: auto;
   -webkit-backdrop-filter: blur(17.1439px);
@@ -3755,6 +3758,7 @@ h1, h2, h3, h4, h5, h6 {
   .roadmap__header--oct .roadmap__inside .roadmap__inside-svg-o span {
     width: 85px;
     height: 28px;
+    padding-left: 3px;
   }
 }
 @media (max-width: 480px) {
@@ -5742,6 +5746,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
   line-height: 104%;
   color: #FFFFFF;
+  word-break: break-all;
 }
 @media (max-width: 768px) {
   .popup__content h3 {

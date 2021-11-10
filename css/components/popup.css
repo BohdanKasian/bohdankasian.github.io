@@ -38,6 +38,7 @@
   font-size: 30px;
   line-height: 104%;
   color: #FFFFFF;
+  word-break: break-all;
 }
 @media (max-width: 768px) {
   .popup__content h3 {
