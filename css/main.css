@@ -306,6 +306,9 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 4;
   margin-bottom: 20px;
 }
+.header__socials__discord:hover svg:last-child {
+  top: 1px;
+}
 @media (max-width: 992px) {
   .header__socials {
     margin-bottom: 40px;
@@ -415,9 +418,6 @@ h1, h2, h3, h4, h5, h6 {
 .header__socials li a:hover svg:last-child {
   opacity: 1;
   top: 0;
-}
-.header__socials li a:last-child:hover svg:last-child {
-  top: 2px;
 }
 .header .menu__btn {
   align-items: center;
@@ -2203,6 +2203,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 13px;
   margin-top: 0;
 }
+@media (max-width: 768px) {
+  .about__contactUs p {
+    font-size: 12px;
+    line-height: 14px;
+    width: 151px;
+  }
+}
 .about__contactUs a {
   font-family: "Antenna-Medium";
   display: flex;
@@ -2489,6 +2496,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .connect-nft {
     margin-bottom: 66px;
+    margin-top: 40px;
   }
 }
 .connect-nft__header {
@@ -4368,6 +4376,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 160px;
   position: relative;
 }
+@media (max-width: 768px) {
+  .info {
+    margin-top: 40px;
+    margin-bottom: 0px;
+  }
+}
 .info__left {
   position: absolute;
   left: 0;
@@ -4423,6 +4437,11 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url("./../img/table-toke.svg");
     flex-direction: column;
     height: 194px;
+  }
+}
+@media (max-width: 768px) {
+  .info__container {
+    margin-top: 0;
   }
 }
 @media (max-width: 840px) {
@@ -4655,7 +4674,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 10px;
   padding: 12px 34px;
-  margin-right: 13px;
+  margin-right: 34px;
   box-sizing: border-box;
   cursor: pointer;
   position: relative;
@@ -4911,24 +4930,24 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   position: relative;
 }
-@media (max-width: 1024px) {
-  .contactUs__email {
-    justify-content: center;
-  }
-}
 @media (max-width: 992px) {
   .contactUs__email {
     justify-content: flex-start;
   }
 }
+@media (max-width: 768px) {
+  .contactUs__email {
+    justify-content: center;
+  }
+}
 @media (max-width: 992px) {
   .contactUs__email .address__copy {
-    width: 288px;
+    width: 247px;
     margin-right: 0;
     padding-top: 7px;
     padding-right: 60px;
     padding-bottom: 7px;
-    padding-left: 23px;
+    padding-left: 0;
     border-radius: 6px;
   }
 }
@@ -4955,24 +4974,24 @@ h1, h2, h3, h4, h5, h6 {
   .contactUs__email span {
     position: absolute;
     top: 8px;
-    right: 0px;
+    right: 25px;
     height: auto;
   }
 }
 @media (max-width: 992px) {
   .contactUs__email span {
-    right: 104px;
+    right: 144px;
     top: 8px;
   }
 }
 @media (max-width: 860px) {
   .contactUs__email span {
-    right: 45px;
+    right: 85px;
   }
 }
 @media (max-width: 768px) {
   .contactUs__email span {
-    right: 50px;
+    right: 70px;
     top: 7px;
   }
 }
