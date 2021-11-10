@@ -4728,7 +4728,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 188px;
   height: 54px;
   top: -50px;
-  right: -125px;
+  right: -147px;
   background-image: -webkit-image-set(url("./../img/Union.png") 1x, url("./../img/Union_x2.png") 2x);
   background-repeat: no-repeat;
   display: flex;
@@ -4745,7 +4745,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .address__popup--one-copy, .address__popup--tow-copy {
-  right: -82px;
+  right: -104px;
   width: 100px;
   opacity: 0;
   background-image: -webkit-image-set(url("./../img/copy.png") 1x, url("./../img/copy_x2.png") 2x);
