@@ -1,35 +1,16 @@
 @charset "UTF-8";
-:root {
-  --color-black: #000;
-  --color-white: #fff;
-}
-
-.custom-checkbox__field:checked + .custom-checkbox__content::after {
-  opacity: 1;
-}
-
-.custom-checkbox__field:focus + .custom-checkbox__content::before {
-  outline: 2px solid #f00;
-  outline-offset: 2px;
-}
-
-.custom-checkbox__field:disabled + .custom-checkbox__content {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
 @font-face {
-  font-family: "Muller";
-  src: url("../fonts/../fonts/MullerRegular..eot") format("eot");
-  src: url("../fonts/../fonts/MullerRegular.woff2") format("woff2"), url("../fonts/../fonts/MullerRegular.ttf") format("truetype");
+  font-family: "Antenna-Medium";
+  src: url("../fonts/../fonts/FordAntenna-Regular..eot") format("eot");
+  src: url("../fonts/../fonts/FordAntenna-Regular.woff2") format("woff2"), url("../fonts/../fonts/FordAntenna-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
-  font-family: "Antenna-Medium";
-  src: url("../fonts/../fonts/FordAntenna-Regular..eot") format("eot");
-  src: url("../fonts/../fonts/FordAntenna-Regular.woff2") format("woff2"), url("../fonts/../fonts/FordAntenna-Regular.ttf") format("truetype");
+  font-family: "Muller";
+  src: url("../fonts/../fonts/MullerRegular..eot") format("eot");
+  src: url("../fonts/../fonts/MullerRegular.woff2") format("woff2"), url("../fonts/../fonts/MullerRegular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -66,6 +47,25 @@
   font-display: swap;
   font-style: normal;
 }
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+.custom-checkbox__field:checked + .custom-checkbox__content::after {
+  opacity: 1;
+}
+
+.custom-checkbox__field:focus + .custom-checkbox__content::before {
+  outline: 2px solid #f00;
+  outline-offset: 2px;
+}
+
+.custom-checkbox__field:disabled + .custom-checkbox__content {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -288,8 +288,6 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-backdrop-filter: blur(17.1439px);
-    backdrop-filter: blur(17.1439px);
     width: 99.8%;
     height: 547px;
     -webkit-clip-path: polygon(0% 0%, 0% 100%, 79% 100%, 80% 99%, 80% 100%, 80% 99%, 81% 97%, 100% 0%);
@@ -373,6 +371,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 7px;
   position: relative;
 }
+@media (max-width: 992px) {
+  .header__socials li a {
+    display: block;
+  }
+}
 @media (max-width: 1170px) {
   .header__socials li a svg {
     width: 30px;
@@ -410,6 +413,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header__socials li a:hover svg:last-child {
   opacity: 1;
+  top: 0;
 }
 .header .menu__btn {
   align-items: center;
@@ -579,6 +583,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.4s ease;
   transform: translateX(0%);
   will-change: auto;
+  -webkit-backdrop-filter: blur(17.1439px);
+  backdrop-filter: blur(17.1439px);
 }
 .header .banner {
   display: flex;
@@ -4715,7 +4721,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .address__popup--one-copy, .address__popup--tow-copy {
-  right: -83px;
+  right: -82px;
   width: 100px;
   opacity: 0;
   background-image: -webkit-image-set(url("./../img/copy.png") 1x, url("./../img/copy_x2.png") 2x);
@@ -5707,7 +5713,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 50;
+  z-index: 110;
   display: none;
 }
 .popup__content {
