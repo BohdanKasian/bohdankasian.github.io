@@ -574,8 +574,10 @@ function setRoadmapEvents() {
 function addressEvents() {
   $(".address__copy-btn").hover(function () {
     $('.address__popup--one').addClass('active');
+    $('.address__popup--one-copy').removeClass('active');
   }, function () {
     $('.address__popup--one').removeClass('active');
+    $('.address__popup--one-copy').removeClass('active');
   });
   $(".address__copy-btn").click(function () {
     $('.address__popup--one-copy').addClass('active');
@@ -589,8 +591,10 @@ function addressEvents() {
 function contactUsEvents() {
   $(".contactUs__copy-btn").hover(function () {
     $('.address__popup--tow').addClass('active');
+    $('.address__popup--tow-copy').removeClass('active');
   }, function () {
     $('.address__popup--tow').removeClass('active');
+    $('.address__popup--tow-copy').removeClass('active');
   });
   $(".contactUs__copy-btn").click(function () {
     $('.address__popup--tow-copy').addClass('active');
