@@ -4596,6 +4596,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin-bottom: 10px;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 @media (max-width: 992px) {
   .address__title {
@@ -4781,6 +4782,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   width: 262px;
+  white-space: nowrap;
   height: 44px;
   border-radius: 10px;
   border: double 2px transparent;
@@ -4869,7 +4871,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   margin-bottom: 26px;
 }
-@media (max-width: 7600px) {
+@media (max-width: 760px) {
   .contactUs__desc {
     align-items: center;
     text-align: center;
