@@ -1,6 +1,5 @@
 "use strict";
 
-//toggle menu
 $(document).ready(function () {
   $('.menu__btn').click(function () {
     $('.header__top').addClass('header__top--active');
@@ -401,7 +400,8 @@ $('a.anchor').on('click', function (event) {
     event.preventDefault();
     $('html, body').animate({
       scrollTop: target.offset().top
-    }, 3500);
+    }, 1500);
+    hideWindiwsMenu();
   }
 });
 "use strict";
