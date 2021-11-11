@@ -402,6 +402,7 @@ $('a.anchor').on('click', function (event) {
       scrollTop: target.offset().top
     }, 1500);
     hideWindiwsMenu();
+    document.removeEventListener('wheel', prevent);
   }
 });
 "use strict";
