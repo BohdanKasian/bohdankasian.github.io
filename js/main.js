@@ -388,6 +388,8 @@ window.onresize = function (event) {
     setRoadmapEvents();
     $(".roadmap__content--ter").unbind('mouseenter mouseleave');
     $(".roadmap__content--nov").unbind('mouseenter mouseleave');
+  } else if ($(roadmapLazyLoad).attr("loaded") && $('body').width() < 930) {
+    setRoadmapEvents();
   }
 };
 
