@@ -4767,6 +4767,11 @@ h1, h2, h3, h4, h5, h6 {
     right: -66px;
   }
 }
+@media (max-width: 490px) {
+  .address__popup--one {
+    display: none !important;
+  }
+}
 @media (max-width: 992px) {
   .address__popup--tow {
     right: -64px;
@@ -4775,6 +4780,11 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 750px) {
   .address__popup--tow {
     right: -66px;
+  }
+}
+@media (max-width: 490px) {
+  .address__popup--tow {
+    display: none !important;
   }
 }
 @media (max-width: 992px) {
@@ -4939,7 +4949,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: flex-start;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .contactUs__email {
     justify-content: center;
   }
@@ -4993,10 +5003,9 @@ h1, h2, h3, h4, h5, h6 {
     right: 85px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .contactUs__email span {
-    right: 70px;
-    top: 7px;
+    right: 63px;
   }
 }
 .contactUs__email span svg {
@@ -5018,10 +5027,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 768px) {
   .contactUs__email span svg {
-    top: -1px;
+    top: -3px;
     width: 22px;
     height: 22px;
-    right: -30px;
+  }
+}
+@media (max-width: 760px) {
+  .contactUs__email span svg {
+    top: -3px;
+    width: 22px;
+    height: 22px;
   }
 }
 .contactUs__email span svg:last-child {
@@ -5699,6 +5714,12 @@ h1, h2, h3, h4, h5, h6 {
   .footer__socials ul li a svg:last-child, .footer__socials ul li a img:last-child {
     top: -51px;
   }
+}
+.footer__socials ul li a img {
+  height: 100% !important;
+}
+.footer__socials ul li a img:last-child {
+  height: 96% !important;
 }
 .footer__socials ul li a:hover svg:last-child, .footer__socials ul li a:hover img:last-child {
   opacity: 1;
