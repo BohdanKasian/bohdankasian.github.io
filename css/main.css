@@ -688,6 +688,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: linear-gradient(#00001E, #00001E), linear-gradient(296.4deg, #6FDCFF 16.59%, #FF248D 83.41%);
   background-origin: border-box;
   background-clip: content-box, border-box;
+  white-space: nowrap;
 }
 @media (max-width: 992px) {
   .header .banner__left a {

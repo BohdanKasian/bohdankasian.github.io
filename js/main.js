@@ -455,10 +455,7 @@ function onResizeSetEvents() {
       $(".roadmap__line-oct:last").addClass("active");
       $(".roadmap__content--oct").children('ul').addClass("_active");
     }, function () {
-      $('.roadmap__header--oct').removeClass("active");
-      $(".roadmap__content--oct").removeClass("active");
-      $(".roadmap__line-oct:last").removeClass("active");
-      $(".roadmap__content--oct").children('ul').removeClass("_active");
+      setActiveFirstBlockRoadmap();
     });
     $(".roadmap__content--nov").hover(function () {
       $('.roadmap__header--nov').addClass("active");
@@ -468,12 +465,14 @@ function onResizeSetEvents() {
       $(".roadmap__content--nov").children('ul').addClass("_active");
       $(".roadmap__header--oct").removeClass("active");
       $(".roadmap__content--oct").removeClass("active");
+      $(".roadmap__line-oct:last").removeClass("active");
     }, function () {
       $('.roadmap__header--nov').removeClass("active");
       $(".roadmap__header--oct").removeClass("active--nov");
       $(".roadmap__content--nov").removeClass("active");
       $(".roadmap__line-nov:last").removeClass("active");
       $(".roadmap__content--nov").children('ul').removeClass("_active");
+      setActiveFirstBlockRoadmap();
     });
     $(".roadmap__content--ter").hover(function () {
       $('.roadmap__header--ter').addClass("active");
@@ -484,6 +483,7 @@ function onResizeSetEvents() {
       $(".roadmap__content--ter").children('ul').addClass("_active");
       $(".roadmap__header--oct").removeClass("active");
       $(".roadmap__content--oct").removeClass("active");
+      $(".roadmap__line-oct:last").removeClass("active");
     }, function () {
       $('.roadmap__header--ter').removeClass("active");
       $(".roadmap__header--nov").removeClass("active--ter");
@@ -491,6 +491,7 @@ function onResizeSetEvents() {
       $(".roadmap__content--ter").removeClass("active");
       $(".roadmap__line-ter:last").removeClass("active");
       $(".roadmap__content--ter").children('ul').removeClass("_active");
+      setActiveFirstBlockRoadmap();
     });
   }
 }
@@ -503,11 +504,6 @@ function setRoadmapEvents() {
     $(".roadmap__line-oct:last").addClass("active");
     $(".roadmap__content--oct").children('ul').addClass("_active");
   }, function () {
-    $('.roadmap__header--oct').removeClass("active");
-    $(".roadmap__content--oct").removeClass("active");
-    $(".roadmap__line-oct:last").removeClass("active");
-    $(".roadmap__content--oct").children('ul').removeClass("_active");
-
     if ($('body').width() <= 930) {
       setActiveFirstBlockRoadmap();
     }
@@ -527,10 +523,7 @@ function setRoadmapEvents() {
     $(".roadmap__content--nov").removeClass("active");
     $(".roadmap__line-nov:last").removeClass("active");
     $(".roadmap__content--nov").children('ul').removeClass("_active");
-
-    if ($('body').width() <= 1024) {
-      setActiveFirstBlockRoadmap();
-    }
+    setActiveFirstBlockRoadmap();
   });
   $(".roadmap__header--ter span").hover(function () {
     $('.roadmap__header--ter').addClass("active");
@@ -549,10 +542,7 @@ function setRoadmapEvents() {
     $(".roadmap__content--ter").removeClass("active");
     $(".roadmap__line-ter:last").removeClass("active");
     $(".roadmap__content--ter").children('ul').removeClass("_active");
-
-    if ($('body').width() <= 1024) {
-      setActiveFirstBlockRoadmap();
-    }
+    setActiveFirstBlockRoadmap();
   }); ////////////
 }
 
