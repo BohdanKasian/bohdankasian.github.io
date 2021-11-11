@@ -1309,6 +1309,9 @@ h1, h2, h3, h4, h5, h6 {
 .ticker__item:first-child {
   margin-left: 0;
 }
+.ticker__item img {
+  max-height: 52px;
+}
 @media (max-width: 768px) {
   .ticker__item img {
     height: 25px;
@@ -2032,7 +2035,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 145px;
   color: #fff;
   display: flex;
-  max-width: 1440px;
+  max-width: 1920px;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
