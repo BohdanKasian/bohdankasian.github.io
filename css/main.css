@@ -2240,6 +2240,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 12px;
     line-height: 17px;
     border-radius: 6px;
+    margin-top: 12px;
   }
 }
 .about__contactUs a:before {
@@ -4914,6 +4915,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 50px;
   text-transform: uppercase;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 @media (max-width: 992px) {
   .contactUs__desc b {
@@ -5665,19 +5667,22 @@ h1, h2, h3, h4, h5, h6 {
 .footer__socials ul li a svg:last-child {
   top: 0 !important;
 }
+.footer__socials ul li a img:last-child {
+  top: 0 !important;
+}
 @media (max-width: 768px) {
-  .footer__socials ul li a svg {
+  .footer__socials ul li a svg, .footer__socials ul li a img {
     width: 75px;
     height: 75px;
   }
 }
 @media (max-width: 480px) {
-  .footer__socials ul li a svg {
+  .footer__socials ul li a svg, .footer__socials ul li a img {
     width: 65px;
     height: 65px;
   }
 }
-.footer__socials ul li a svg:last-child {
+.footer__socials ul li a svg:last-child, .footer__socials ul li a img:last-child {
   position: absolute;
   top: -75px;
   left: 0;
@@ -5685,51 +5690,16 @@ h1, h2, h3, h4, h5, h6 {
   will-change: auto;
 }
 @media (max-width: 768px) {
-  .footer__socials ul li a svg:last-child {
+  .footer__socials ul li a svg:last-child, .footer__socials ul li a img:last-child {
     top: -61px;
   }
 }
 @media (max-width: 480px) {
-  .footer__socials ul li a svg:last-child {
+  .footer__socials ul li a svg:last-child, .footer__socials ul li a img:last-child {
     top: -51px;
   }
 }
-.footer__socials ul li a:hover svg:last-child {
-  opacity: 1;
-}
-.footer__socials ul li:last-child a {
-  display: block;
-}
-@media (max-width: 768px) {
-  .footer__socials ul li:last-child a img {
-    width: 75px;
-    height: 87px;
-  }
-}
-@media (max-width: 480px) {
-  .footer__socials ul li:last-child a img {
-    width: 65px;
-    height: 75px;
-  }
-}
-.footer__socials ul li:last-child a img:last-child {
-  position: absolute;
-  top: -87px;
-  left: 0;
-  opacity: 0;
-  will-change: auto;
-}
-@media (max-width: 768px) {
-  .footer__socials ul li:last-child a img:last-child {
-    top: 0px;
-  }
-}
-@media (max-width: 480px) {
-  .footer__socials ul li:last-child a img:last-child {
-    top: 0px;
-  }
-}
-.footer__socials ul li:last-child a:hover img:last-child {
+.footer__socials ul li a:hover svg:last-child, .footer__socials ul li a:hover img:last-child {
   opacity: 1;
 }
 
