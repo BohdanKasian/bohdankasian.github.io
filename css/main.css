@@ -122,6 +122,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-container {
   background: #00001E;
+  overflow-x: hidden;
 }
 
 .header {
@@ -139,6 +140,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 1280px) {
   .header__container {
@@ -2575,6 +2577,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1024px) {
   .connect-nft__wrapper {
     width: 100%;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -3478,7 +3481,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .roadmap__title {
     text-align: left;
-    width: 316px;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -5523,16 +5526,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .footer__nav ul li {
-  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 10px;
 }
 @media (max-width: 1170px) {
   .footer__nav ul li {
-    margin-left: 10px;
+    margin-right: 10px;
   }
-}
-.footer__nav ul li:first-child {
-  margin-left: 0;
 }
 @media (max-width: 670px) {
   .footer__nav ul li {
@@ -5564,11 +5564,6 @@ h1, h2, h3, h4, h5, h6 {
   background: -webkit-linear-gradient(160deg, #FCB5EF -1.44%, #F7DE52 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-@media (max-width: 1170px) {
-  .footer__nav ul li:nth-child(6) {
-    margin-left: 0;
-  }
 }
 .footer__socialsMob {
   display: none;
