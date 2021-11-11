@@ -317,10 +317,16 @@ window.onscroll = function () {
 
   if (prevScrollpos > currentScrollPos) {
     console.log("1");
+    console.log(currentScrollPos);
     $(".menu__btn").addClass('_active');
   } else {
     console.log("2");
+    console.log(currentScrollPos);
     $(".menu__btn").removeClass('_active');
+  }
+
+  if (currentScrollPos <= 100) {
+    $(".menu__btn").addClass('_active');
   }
 
   prevScrollpos = currentScrollPos; //fix bug сьезжает тултип на айфоне если виден и начинаешь скролить
