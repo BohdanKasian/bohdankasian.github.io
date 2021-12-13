@@ -1,0 +1,231 @@
+#map .section1{	
+	position: relative;
+	background: url(../img/blur_8.png)no-repeat center top/ contain;
+}
+#map .section1_block{
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+}
+#map .table_body{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-bottom: 50px;
+	position: relative;
+	
+}
+
+
+#map .section1_column h3{
+	font-size: 18px;
+	padding: 5px 0;
+	color: #12283a;
+	text-shadow: none;	
+}
+.count{
+	order: 5;
+	display: none;
+}
+#map .section1_thead{
+	padding: 15px 0;
+}
+#map .section1_thead p{
+	font-size: 36px;
+	margin: auto;
+	width: 120px;
+	margin-top: -15px;
+	opacity: .5;
+}
+#map .section1_img{
+	line-height: 120px;
+	padding-top: 25px;
+	background-position: center !important;
+	background-size: contain !important;
+	background-repeat: no-repeat !important;	
+}
+#map .section1_list li{
+	text-align: center;
+	padding: 20px 30px 0;
+}
+#map .section1_list li.checked{
+	position: relative;
+}
+#map .section1_list li.checked:after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	background: url(../img/map/CHECK.svg)no-repeat center right/ 24px;
+}
+
+
+
+#map .table_buttons button{
+	width: 40px;
+	height: 40px;
+	opacity: .5;
+	margin: 0 15px;
+	background: url(../img/map/up-arrow.svg)no-repeat center/contain;
+}
+
+#map .table_buttons button:hover 
+{
+	opacity: 1;
+}
+
+
+#map .table_buttons button.left_arrow{
+	transform: rotate(-90deg);
+}
+#map .table_buttons button.right_arrow{
+	transform: rotate(90deg);
+}
+#map .table_buttons button.active{
+	opacity: 1;
+}
+#map .table_top_buttons button{	
+    	background: url(../img/arrow.svg)no-repeat center/contain;
+    	position: relative;
+}
+#map .table_top_buttons button.left_arrow{
+	transform: rotate(180deg);
+	left: -10px;
+}
+#map .table_top_buttons button.right_arrow{		
+	transform: rotate(0);
+	right: -10px;
+}
+#map .section1_column:nth-child(1) h3{
+	background: #ffff9a;
+}
+#map .section1_column:nth-child(2) h3{
+	background: #ffbd29;
+}
+#map .section1_column:nth-child(3) h3{
+	background: #ff8401;
+}
+#map .section1_column:nth-child(4) h3{
+	background: #ff5000;
+}
+#map .section1_column:nth-child(5) h3{
+	background: #b8616c;
+}
+#map .section1_column:nth-child(6) h3{
+	background: #555;
+}
+#map .section1_column:nth-child(7) h3{
+	background: #555;
+}
+#map .section1_column:nth-child(8) h3{
+	background: #555;
+}
+#map .section1_column:nth-child(9) h3{
+	background: #555;
+}
+#map .section1_column:nth-child(10) h3{
+	background: #555;
+}
+#map .section1_column:nth-child(11) h3{
+	background: #555;
+}
+#map .section1_column:nth-child(12) h3{
+	background: #555;
+}
+#map .section1_column:nth-child(13) h3{
+	background: #555;
+}
+
+#map .section1_column:nth-child(2) .section1_thead p{
+	color: #ffff9a;
+}
+#map .section1_column:nth-child(3) .section1_thead p{
+	color: #ffbd29;
+}
+#map .section1_column:nth-child(4) .section1_thead p{
+	color: #ff8401;
+}
+#map .section1_column:nth-child(5) .section1_thead p{
+	color: #ff5000;
+}
+#map .section1_column:nth-child(6) .section1_thead p{
+	/* color: #b8616c; */
+}
+#map .section1_column:nth-child(7) .section1_thead p{
+	/*color: #;*/
+}
+#map .section1_column:nth-child(8) .section1_thead p{
+	/*color: #;*/
+}
+#map .section1_column:nth-child(9) .section1_thead p{
+	/*background: #;*/
+}
+#map .section1_column:nth-child(10) .section1_thead p{
+	/*color: #;*/
+}
+#map .section1_column:nth-child(11) .section1_thead p{
+	/*color: #;*/
+}
+#map .section1_column:nth-child(12) .section1_thead p{
+	/*color: #;*/
+}
+#map .section1_column:nth-child(13) .section1_thead p{
+	/*color: #;*/
+}
+#map .section1_table .table_top_buttons {
+	position: absolute;
+	width: 100%;
+	top: 56px;
+	z-index: 99;
+}
+#map .section1_table .table_top_buttons button{
+	margin: 0;
+}
+
+
+@media (max-width: 1365px) {
+	#map .section1:before, #map .section1:after{
+		display: none;
+	}
+	#map .section1_table{
+	    margin-bottom: 40px;
+	}
+	.count{
+		order: 4;
+	}
+}
+@media (max-width: 1023px) {
+	#map .section1_table{
+	    margin-bottom: 30px;
+	}
+	.count{
+		order: 3;
+	}
+
+}
+
+@media (max-width: 767px) {
+	#map .section1_table{
+	    grid-template-columns: repeat(12, 100%);
+	    margin-bottom: 26px;
+	}
+	#map .table_buttons button{
+    	background: url(../img/arrow.svg)no-repeat center/contain;
+    	margin: 0 40px;
+    	width: 48px;
+    	height: 48px;
+	}
+	#map .table_buttons button.left_arrow{
+    	transform: rotate(180deg);
+	}
+	#map .table_buttons button.right_arrow{		
+    	transform: rotate(0);
+	}
+	.count{
+		order: 1;
+	}
+
+}

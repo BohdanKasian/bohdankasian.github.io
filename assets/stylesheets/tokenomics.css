@@ -1,0 +1,128 @@
+#tokenomics .section1{
+	background: url(../img/blur6.png)no-repeat top center/auto;
+}
+#tokenomics .section1:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: url(../img/blur7.png)no-repeat bottom center/auto;
+}
+#tokenomics .section1_block{
+	margin-top: 50px;
+}
+#tokenomics .table_block h3{
+	text-transform: none;
+    color: #5ccafd;
+    padding-bottom: 0;
+    text-align: left;
+    width: 32%;
+}
+#tokenomics .tokenomics_table{
+	font-size: 18px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background: #122b43;
+	text-align: left;
+	width: 65%;
+}
+#tokenomics .tokenomics_table td,
+#tokenomics .tokenomics_table th{
+	padding: 22px 30px;
+    font-family: SegoeUIL, sans-serif;
+    font-weight: normal;
+}
+#tokenomics .tokenomics_table thead{
+	background: #024582;
+	border: 3px solid #024582;
+	text-transform: uppercase;
+}
+#tokenomics .tokenomics_table tbody{
+	border: 3px solid #0A2C4F;
+}
+#tokenomics .tokenomics_table tr td:first-child{
+	text-align: right;
+}
+#tokenomics .adv_block .section1_info_block{
+	width: 432px;
+}
+#tokenomics .adv_block img{
+	height: 65px;
+	margin-bottom: 30px;
+}
+#tokenomics .adv_block h3{
+	padding-bottom: 30px;
+}
+#tokenomics .adv_block p{
+	font-size: 18px;
+}
+#tokenomics .image_block h3{
+	color: #f95353;
+	text-transform: none;
+}
+
+
+@media (max-width: 1365px) { 
+	#tokenomics .tokenomics_table td, #tokenomics .tokenomics_table th{
+		padding: 15px 20px;
+	}
+
+}
+@media (max-width: 1023px) {
+	#tokenomics .tokenomics_table td, #tokenomics .tokenomics_table th{
+		font-size: 14px;
+		padding: 10px 15px;
+	}
+	#tokenomics .adv_block .section1_info_block{
+		width: 45%;
+	}
+
+}
+
+@media (max-width: 767px) {
+	#tokenomics .section1_block{
+		margin-top: 20px;
+	}
+	#tokenomics .table_block h3{
+		width: 100%;
+		text-align: center;
+	}
+	#tokenomics .tokenomics_table{
+		width: 100%;
+		margin-top: 26px;
+	}
+	#tokenomics .tokenomics_table td{
+		font-size: 11px;
+		padding: 11px 5px;
+	}
+	#tokenomics .tokenomics_table th{
+		font-size: 12px;
+		padding: 19px 5px;
+	}
+	#tokenomics .tokenomics_table tr td:first-child{
+		text-align: center;
+	}
+	#tokenomics .adv_block .section1_info_block{
+		width: 100%;
+	}
+	#tokenomics .adv_block .section1_info_block .phone_img{
+		position: relative;
+		margin: 0 auto 26px;
+	}
+	#tokenomics .adv_block .section1_info_block:first-child{
+		margin-bottom: 26px;
+	}
+	#tokenomics .adv_block .section1_info_block p{
+		font-size: 16px;
+	}
+	#tokenomics .image_block h3{
+		padding-top: 26px;
+	}
+	#tokenomics .adv_block img{
+		height: 43px;
+		margin-bottom: 26px;
+	}
+
+}

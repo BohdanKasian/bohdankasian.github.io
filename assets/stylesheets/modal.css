@@ -1,0 +1,185 @@
+.modal_wrap{
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.9);
+}
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(1, 28, 58, 0.8);
+}
+.title_block{
+	padding: 10px 20px;
+	background: rgba(92, 202, 253, 0.3);
+}
+.title_block h6{
+	font-size: 14px;
+	color: #5CCAFD;
+}
+.close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 15px;
+	height: 15px;
+	background: url(../img/modal/close-button.svg)no-repeat center/cover;
+	cursor: pointer;
+	z-index: 100;
+}
+section .close{
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 35px;
+	width: 100%;
+	background: url(../img/modal/close-button.svg)no-repeat center right 10px/15px;
+	background-color: rgba(0,0,0,.3);
+    -webkit-backdrop-filter: saturate(180%) blur(5px);
+    backdrop-filter: saturate(180%) blur(5px);
+
+}
+.scroll_modal{
+	position: relative;
+	padding: 45px 26px;
+	max-height: calc(95vh - 40px);
+	overflow-y: auto;
+}
+.contact_modal, .success_modal, .soon_modal{
+	width: 360px;
+}
+.modal .input_label:focus-within .placeholder,
+.modal .placeholder{
+	background:transparent;
+}
+.modal .input_label{
+	margin-bottom: 40px;
+}
+.modal .contact_form .input_label:last-of-type{
+	margin: 42px 0;
+}
+.modal .all_btn{
+	background: #1c5375;
+}
+.success_modal img,
+.soon_modal img{
+	width: 40px;
+	display: block;
+	margin: 0 auto;
+}
+
+.success_modal p,
+.soon_modal p{
+	font-size: 22px;
+	margin: 15px 0 30px;
+	text-align: center;
+	font-family: Segoe, sans-serif;
+}
+
+
+.modal_alert
+{
+	width: 96%;
+	max-width: 600px;
+	background: #fff;
+	border: 1px solid #9eb1d5;
+}
+
+.modal_alert *
+{
+	color: #000;
+	font-size: 18px;
+
+}
+
+.alert_header
+{
+	background: #b0c1dd;
+	border-bottom: 1px solid #9eb1d5;
+	height: 35px;
+	padding: 0 10px;
+}
+
+.alert_header .close
+{
+	filter: grayscale(100%)brightness(.4);
+}
+
+.alert_body
+{
+	padding: 40px 25px;
+}
+
+.alert_body img
+{
+	height:48px;
+}
+
+.alert_body p
+{
+	width: calc(100% - 60px);
+	text-align: justify;
+}
+
+.alert_footer
+{
+	background: #f1f1f1;
+	padding: 10px 20px;
+}
+
+.btn_alert
+{
+	text-align: center;
+	line-height: 40px;
+	background: transparent;
+	border: 2px solid #81a9f8;
+	width: 45%;
+	max-width: 140px;
+	margin: 3px;
+	border-radius: 3px;
+}
+
+button.btn_alert
+{
+	border-color: #838ea5;
+}
+
+
+
+
+
+@media (max-width: 1365px) { 
+
+}
+@media (max-width: 1023px) {
+	.modal .input_label{
+		margin-bottom: 30px;
+	}
+
+}
+
+@media (max-width: 767px) {
+	.contact_modal, .success_modal, .soon_modal{
+		width: 90%;
+	}
+	.modal .input_label{
+		margin-bottom: 26px;
+	}
+	.modal textarea{
+		height: 62px;
+	}
+	.modal .input{
+		font-size: 12px;
+		padding: 7px 12px;
+	}
+	.modal .placeholder{
+		top: 10px;
+		font-size: 12px;
+	}
+
+}

@@ -1,0 +1,768 @@
+*
+{
+	--start-height: 40px;
+	--start-gap: 5px;
+}
+
+.pc
+{
+ 	background: #0567b4;
+ 	position: relative;
+ 	cursor: pointer;
+}
+.phone_block .pc{
+	padding: 0 3px;
+}
+.pc:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 2px solid transparent;
+}
+.pc:hover:before{
+	border-color: rgba(255,255,255,.5);
+}
+
+.sc
+{
+	background: #118bca;
+}
+#desktop{
+	min-height: 550px;
+	position: relative;
+	overflow-x: hidden;
+	background: url(../img/wall.jpg)no-repeat center/cover;
+}
+.start_panel
+{
+	position: fixed; 
+	bottom: 0; left: 0;
+	width: 100%;
+	height: var(--start-height);
+	background: #000;
+}
+
+.start_open,
+.start_btn
+{
+	min-width: 48px;
+	height: var(--start-height);
+	cursor: pointer;
+	position: relative;
+}
+.start_open
+{
+	background: #2f2f2f;
+	cursor: pointer;
+}
+.app_item:hover,
+.start_btn:hover,
+.start_open:hover{
+	background: rgba(75,75,75,.8);
+}
+
+.start_open img,
+.start_search img
+{
+	width: 22px;
+	cursor: pointer;
+}
+
+.start_search
+{
+	width: 320px;
+	height: var(--start-height);
+	background: #161616;
+	padding: 0 14px;
+}
+
+.start_search p
+{
+	font-size: 14px;
+}
+
+.start_btn img
+{
+	width: 26px;
+}
+
+.start_date
+{
+	padding: 0 14px;
+}
+
+.start_date p
+{
+	line-height: 1.2em;
+}
+
+.start_menu
+{
+	width: 570px;
+	height: 690px;
+	background: #202326;
+	position: absolute; 
+	bottom: 40px; left: 0;
+	padding: 14px 22px 14px 14px;
+	grid-template-columns: 1fr 290px;
+
+	position: fixed; bottom: 40px; left: 0;
+
+	transform: translateY(100%);
+	transition: .4s;
+}
+
+.start_show
+{
+	transform: translateY(0) !important;
+}
+
+.logo_img
+{
+	margin-right: var(--start-gap);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.start_logo p,
+.main_btn p
+{
+	font-size: 16px;
+}
+
+.app_list,
+.app_grid 
+{
+	transform: translateY(100%);
+	transition: .6s;
+}
+
+
+.app_list h4
+{
+	font-size: 12px;
+	color: #c2c2c3;
+}
+
+.app_list article
+{
+	margin-top: 20px;
+	grid-row-gap: 0;
+}
+
+.app_item
+{
+	margin: 1px 0;
+	padding: 2px 3px;
+	cursor: pointer;
+	position: relative;
+	left: -3px;
+}
+.app_item .pc:hover:before{
+	display: none;
+}
+.app_item_icon
+{
+	width: 32px;
+	height: 32px;
+	margin-right: var(--start-gap);
+}
+
+.app_item_icon img
+{
+	width: 18px;
+}
+
+.app_grid h4
+{
+	margin: 12px 0;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.app_grid_top
+{
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(5, 45px);
+	grid-template-areas: "email email email email weather weather"
+						 "email email email email weather weather"
+						 "contact contact hour min gallery gallery"
+						 "contact contact store store gallery gallery"
+						 "search shirt store store calc internet"
+}
+.app_grid_top .pc{
+	padding: 5px 5px;
+}
+
+.app_grid_email
+{
+	grid-area: email;
+}
+
+.app_grid_weather
+{
+	grid-area: weather;
+}
+
+.app_grid_contact
+{
+	grid-area: contact;
+}
+
+.app_grid_hour
+{
+	grid-area: hour;
+}
+
+.app_grid_min
+{
+	grid-area: min;
+}
+
+.app_grid_gallery
+{
+	grid-area: gallery;
+}
+
+.app_grid_search
+{
+	grid-area: search;
+}
+
+.app_grid_shirt
+{
+	grid-area: shirt;
+}
+
+.app_grid_store
+{
+	grid-area: store;
+}
+
+.app_grid_calc
+{
+	grid-area: calc;
+}
+
+.app_grid_internet
+{
+	grid-area: internet;
+}
+
+.app_grid_middle
+{
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(2, 45px);
+}
+.phone_block .app_grid_middle{
+	margin-bottom: 4px;
+}
+.app_grid_bottom
+{
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(4, 45px);
+
+	grid-template-areas: "g1 g1 g2 g3 g4 g4"
+						 "g1 g1 g5 g6 g4 g4"
+						 "g7 g7 g8 g8 g9 g9"
+						 "g7 g7 g8 g8 g9 g9";
+}
+.app_grid_g1
+{
+	grid-area: g1;
+}
+.app_grid_g2
+{
+	grid-area: g2;
+}
+.app_grid_g3
+{
+	grid-area: g3;
+}
+.app_grid_g4
+{
+	grid-area: g4;
+}
+.app_grid_g5
+{
+	grid-area: g5;
+}
+.app_grid_g6
+{
+	grid-area: g6;
+}
+.app_grid_g7
+{
+	grid-area: g7;
+}
+.app_grid_g8
+{
+	grid-area: g8;
+}
+.app_grid_g9
+{
+	grid-area: g9;
+}
+
+.main_btn{
+	padding: 15px;
+	position: absolute;
+	border: 1px solid transparent;
+	background-position: center !important;
+	background-size: contain !important;
+	background-repeat: no-repeat !important;
+}
+.main_btn:hover{
+	background: rgba(255,255,255,.2);
+	border-color: rgba(255,255,255,.5);
+}
+.tooltip{
+	position: absolute;
+	padding-bottom: 6px;
+	overflow: hidden;
+	box-sizing: content-box;
+	display: none;
+}
+.hovered_tooltip{
+	position: relative;
+	display: block;
+	background: rgba(30,30,30,.9);
+	white-space: nowrap;
+	padding: 5px 10px;
+	color: white;
+	border-radius: 5px;
+	font-size: 12px;
+}
+.hovered_tooltip:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 100%);
+	border: 6px solid transparent; 
+	border-top: 6px solid rgba(30,30,30,.9);
+}
+.mypc{
+	top: 15px;
+	left: 0px;
+}
+.rec{
+	right: 20px;
+	bottom: 70px;
+}
+.main_btn_img{
+	height: auto;
+	width: 48px;
+}
+.bottom_warning{
+	position: absolute;
+	bottom: 100px;
+	right: 250px;
+}
+.bottom_warning p{
+	color: rgba(170,170,170,.3);
+	font-size: 28px;
+	font-family: SegoeUIL, sans-serif;
+}
+.bottom_warning p.big_warn{
+	font-size: 36px;
+}
+.app_grid_email p{
+	font-size: 18px;
+}
+.app_grid_email p.small_p{
+	font-size: 12px;
+	font-family: SegoeUIL, sans-serif;
+}
+.mail_block{
+	margin-top: 10px;
+}
+.mail_block img{
+	height: 19px;
+}
+.app_grid_weather p span{
+	font-size: 8px;
+}
+p.medium_p{
+	font-size: 18px;
+	text-align: right;
+	line-height: 30px;
+}
+.weather_block img{
+	max-width: 50%;
+	max-height: 100px;
+}
+.weather_info p{
+	text-align: right;
+	font-family: SegoeUIL, sans-serif;
+}
+.weather_info .small_p{
+	font-size: 12px;
+	opacity: .5;
+}
+.app_grid_contact img,
+.app_grid_gallery img,
+.app_grid_store img{
+	width: 30px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-top: -15px;
+	margin-left: -15px;
+}
+.app_grid_contact p,
+.app_grid_gallery p,
+.app_grid_store p{
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+}
+.app_grid_hour ,
+.app_grid_min{
+	background: #018ccf;
+}
+.app_grid_hour p,
+.app_grid_min p{
+	width: 100%;
+	font-size: 18px;
+	opacity: .5;
+	text-align: center;
+	padding-top: 5px;
+}
+.app_grid_internet,
+.app_grid_calc,
+.app_grid_shirt,
+.app_grid_search{
+	text-align: center;
+}
+.app_grid_internet img,
+.app_grid_calc img,
+.app_grid_shirt img,
+.app_grid_search img{
+	height: 80%;
+	position: relative;
+	top: 10%;
+}
+.app_grid_middle .pc{
+	text-align: center;
+}
+.app_grid_middle img{
+	height: 50%;
+	position: relative;
+	top: 25%;
+}
+.app_grid_middle .pc:nth-child(2){
+	background: #f74300;
+}
+.app_grid_middle .pc:nth-child(3){
+	background: #f70000;
+}
+.app_grid_middle .pc:nth-child(4){
+	background: #9a30f7;
+}
+.app_grid_middle .pc:nth-child(5){
+	background: #6e85d2;
+}
+.app_grid_middle .pc:nth-child(6),
+.app_grid_middle .pc:nth-child(7){
+	background: #00a7e7;
+}
+.app_grid_middle .pc:nth-child(8){
+	background: #11100e;
+}
+.app_grid_middle .pc:nth-child(9){
+	background: #f79add;
+}
+.app_grid_middle .pc:nth-child(11){
+	background: #223e8b;
+}
+.app_grid_bottom p{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 45px;
+	/*padding-top: 10px;*/
+}
+.app_grid_g1 p,
+.app_grid_g4 p{
+	width: 50%;
+	height: 50%;
+}
+.app_grid_g1{
+	background: linear-gradient(to bottom, #92bd2f, #20945e);
+}
+.app_grid_g2{
+	background: #29c3df;
+}
+.app_grid_g3{
+	background: #633597;
+}
+.app_grid_g4{
+	background: #28a7de;
+}
+.app_grid_g5{
+	background: #0566b3;
+}
+.app_grid_g6{
+	background: #ee098a;
+}
+.app_grid_g7{
+	background: #d14927;
+}
+.app_grid_g8{
+	background: #cc77ca;
+}
+.app_grid_g9{
+	background: #fd6e6a;
+}
+
+.phone_block{
+	display: none;
+}
+@media (min-width: 768px) and (max-height: 830px){
+	.start_menu{
+		zoom:  0.9;
+	}
+}
+@media (min-width: 768px) and (max-height: 730px){
+	.start_menu{
+		zoom:  0.8;
+	}
+}
+@media (max-width: 1599px){
+	.bottom_warning{
+		bottom: 100px;
+	}
+
+	.bottom_warning p{
+		font-size: 20px;
+	}
+	.bottom_warning p.big_warn{
+		font-size: 30px;
+	}
+	.start_menu {
+		width: 520px;
+		height: 640px;
+		grid-template-columns: 1fr 260px;
+	}
+	.start_menu p, .start_menu span, .start_menu  a, .start_menu label{
+		font-size: 12px;
+	}
+	.start_menu .app_grid_top{
+		grid-template-rows: repeat(5, 40px);
+	}
+	.start_menu .app_grid_middle{
+		grid-template-rows: repeat(2, 40px);
+	}
+	.start_menu .app_grid_bottom{
+		grid-template-rows: repeat(4, 40px);
+	}
+	.app_grid_weather p span{
+		font-size: 7px;
+	}
+	.start_menu .mail_block {
+		margin-top: 5px;
+	}
+	.app_grid_top p.medium_p{
+		font-size: 15px;
+		line-height: 28px;
+	}
+	.app_grid_top .weather_block {
+		padding-bottom: 2px;
+	}
+	.app_grid_top .weather_block img{
+		width: 40%;
+	}
+	.start_logo p, .main_btn p{
+		font-size: 14px;
+	}
+}
+@media (max-width: 1365px) {
+	.rec{
+		right: 32px;
+		bottom: 65px;
+	}
+	.main_btn_img{
+		width: 36px;
+	}
+	.bottom_warning{
+		bottom: 90px;
+		right: 190px;
+	}
+	.bottom_warning p{
+		font-size: 16px;
+	}
+	.bottom_warning p.big_warn{
+		font-size: 24px;
+	}
+	.start_logo p, .main_btn p{
+		font-size: 12px;
+	}
+
+}
+@media (max-width: 1023px) {
+	.rec{
+		right: 30px;
+		bottom: 50px;
+	}
+	.bottom_warning{
+		right: 150px;
+		bottom: 80px;
+	}
+	.bottom_warning p{
+		font-size: 14px;
+	}
+	.bottom_warning p.big_warn{
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 767px) {
+	.start_menu,.start_panel, .main_btn {
+		display: none;
+	}
+	.bottom_warning p{
+		display: none;
+	}
+	#desktop{
+		min-height: inherit;
+		background: #1f1f1f;
+	}
+	.app_grid_phone {
+	    grid-template-columns: repeat(6, 1fr);
+	    grid-template-rows: repeat(9, calc(100vw / 3));
+	    grid-template-areas:
+	        "gate gate tokens tokens tokens tokens"
+	        "tokenomics tokenomics news news tracker tracker"
+	        "team team team team audit audit"
+	        "buy buy gallery gallery about about"
+	        "weather weather weather contract contract contract"
+	        "paper paper road road road road"
+	        "ntf ntf policy policy chart chart"
+	        "ourteam ourteam ourteam ourteam merch merch"
+	        "terms terms ee ee contact contact"
+	}
+	.app_grid_phone_gate{
+		grid-area: gate;
+	}
+	.app_grid_phone_tokens{
+		grid-area: tokens;
+	}
+	.app_grid_phone_tokenomics{
+		grid-area: tokenomics;
+	}
+	.app_grid_phone_news{
+		grid-area: news;
+	}
+	.app_grid_phone_tracker{
+		grid-area: tracker;
+	}
+	.app_grid_phone_team{
+		grid-area: team;
+	}
+	.app_grid_phone_audit{
+		grid-area: audit;
+	}
+	.app_grid_phone_buy{
+		grid-area: buy;
+	}
+	.app_grid_phone_gallery{
+		grid-area: gallery;
+	}
+	.app_grid_phone_about{
+		grid-area: about;
+	}
+	.app_grid_phone_weather{
+		grid-area: weather;
+	}
+	.app_grid_phone_contract{
+		grid-area: contract;
+	}
+	.app_grid_phone_paper{
+		grid-area: paper;
+	}
+	.app_grid_phone_road{
+		grid-area: road;
+	}
+	.app_grid_phone_ntf{
+		grid-area: ntf;
+	}
+	.app_grid_phone_policy{
+		grid-area: policy;
+	}
+	.app_grid_phone_chart{
+		grid-area: chart;
+	}
+	.app_grid_phone_ourteam{
+		grid-area: ourteam;
+	}
+	.app_grid_phone_merch{
+		grid-area: merch;
+	}
+	.app_grid_phone_terms{
+		grid-area: terms;
+	}
+	.app_grid_phone_ee{
+		grid-area: ee;
+	}
+	.app_grid_phone_contact{
+		grid-area: contact;
+	}
+	.app_grid_phone .head_p:not(.mail_block .head_p){
+		font-size: 13px;
+		position: absolute;
+		bottom: 3px;
+		left: 4px;
+	}
+	.app_grid_phone img:not(.mail_block img, .weather_block img){
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.phone_block{
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.phone_block .app_grid_middle{
+	    grid-template-rows: repeat(2, calc(100vw / 6 - 3px));
+		margin-top: 4px;
+	}
+	.app_grid_phone_team .small_p{
+		font-size: 14px;
+		font-family: SegoeUIL, sans-serif;
+		padding-top: 10px;
+
+	}
+	.bold_p{
+		font-family: SegoeBold, sans-serif;
+	}
+	.mail_block {
+		padding: 2px 7px 2px 1px;
+		position: absolute;
+		bottom: 1px;
+		left: 1px;
+		width: 100%;
+	}
+	.weather_block {
+		position: absolute;
+		bottom: 3px;
+		left: 3px;
+		width: 100%;		
+	}
+	.weather_info{
+		padding-right: 10px;
+	}
+	.weather_info p{
+		padding-top: 4px;
+	}
+	.weather_info .medium_p{
+		font-size: 24px;
+		font-family: SegoeUI, sans-serif;
+	}
+}
