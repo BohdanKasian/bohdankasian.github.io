@@ -8,6 +8,8 @@
 #gallery_slider {
   display: flex;
   align-items: center;
+  position: relative;
+  margin-top: 50px;
 }
 
 #gallery .logo {
@@ -26,7 +28,7 @@
 }
 
 #gallery .section1 .container {
-  height: initial;
+  height: 100%;
 }
 
 #gallery .swiper {
@@ -73,10 +75,18 @@
 }
 
 .galleryNav {
-  padding-top: 50px;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 25%;
+  width: 100%;
+  z-index: 100;
+}
+
+
+.galleryNav .gallery_btn.prev {
+  left: 0;
 }
 
 .galleryNav button {
@@ -100,15 +110,11 @@
 
 @media screen and (max-width: 767px) {
   #gallery_slider {
-    margin: 0;
+    margin: 20px 0 0;
   }
 
   .swiper {
     width: 100%;
     padding-bottom: 20px;
-  }
-
-  .galleryNav {
-    margin-top: 20px;
   }
 }
