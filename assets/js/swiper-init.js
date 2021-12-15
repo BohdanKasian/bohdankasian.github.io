@@ -1,22 +1,19 @@
-function galleryInit()
-{
-    new Swiper(".myGallery", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-        navigation: {
-            nextEl: '.next',
-            prevEl: '.prev',
-          },
-    });
+function galleryInit() {
+  new Swiper('.myGallery', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    navigation: {
+      nextEl: '.next',
+      prevEl: '.prev',
+    },
+  });
 }
-
-    
